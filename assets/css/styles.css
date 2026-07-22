@@ -1764,7 +1764,7 @@ details[open] summary::after { transform: rotate(45deg); }
 
   .category-nav {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     width: 100%;
     overflow: visible;
     border-radius: 20px;
@@ -1778,6 +1778,12 @@ details[open] summary::after { transform: rotate(45deg); }
     padding: 0.72rem 0.6rem;
     font-size: 0.82rem;
     scroll-snap-align: none;
+  }
+
+  /* Évaluation isn't offered as its own tab on mobile; the remaining
+     3 tabs (Automatique, Manuelle, Code) fill one even row instead. */
+  #tab-evaluation {
+    display: none;
   }
 
   .category-block .category-title {
