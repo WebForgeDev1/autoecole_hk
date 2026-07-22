@@ -2961,3 +2961,10 @@ section[id],
     display: none;
   }
 }
+
+/* Contact page: hide the "Documents à préparer" dossier card on mobile. */
+@media (max-width: 640px) {
+  .documents-card {
+    display: none;
+  }
+}
