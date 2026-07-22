@@ -1709,8 +1709,10 @@ details[open] summary::after { transform: rotate(45deg); }
   height: 100%;
 }
 
-.category-block .carousel-arrow {
-  display: none;
+@media (min-width: 641px) {
+  .category-block .carousel-arrow {
+    display: none;
+  }
 }
 
 /* Accelerated plans: a clearly different premium blue treatment. */
@@ -1807,25 +1809,12 @@ details[open] summary::after { transform: rotate(45deg); }
     font-size: 1.2rem;
   }
 
-  .category-block .formula-grid,
-  .category-block .formula-grid--trio,
   .category-block .formula-grid--solo {
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
     max-width: 32rem;
-    overflow: visible;
-    gap: 1.6rem;
     margin: 0 auto;
-    padding: 0;
-  }
-
-  .category-block .formula-grid .formula-card,
-  .category-block .formula-grid--trio .formula-card {
-    flex: none;
-    width: 100%;
-    padding: 1.5rem;
-    border-radius: 20px;
   }
 
   .category-block .formula-card:hover,
