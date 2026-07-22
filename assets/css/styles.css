@@ -227,6 +227,12 @@ main.page-main > section { min-width: 0; width: 100%; }
 }
 @media (max-width: 640px) {
   .site-header .header-phone { display: none; }
+  /* header-actions has no visible children left at this width (both
+     header-phone and header-cta are hidden); hide the container itself
+     so it doesn't consume a flex gap and push the hamburger off the
+     true right edge. */
+  .header-actions { display: none; }
+  .nav-toggle { margin-right: 0; margin-left: auto; }
 }
 
 /* ---------- hero (home) — inset rounded card, Framer-style ---------- */
