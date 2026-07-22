@@ -2298,7 +2298,9 @@ section[id],
   .formula-section .formula-grid,
   .team-section .team-grid,
   .reviews-section .review-grid-static,
-  .google-proof-section .review-grid-static {
+  .google-proof-section .review-grid-static,
+  .category-block .formula-grid,
+  .category-block .formula-grid--trio {
     width: 100% !important;
     max-width: 100% !important;
     margin-left: 0 !important;
@@ -2311,7 +2313,9 @@ section[id],
   .formula-section .formula-grid .formula-card,
   .team-section .team-grid .team-card,
   .reviews-section .review-grid-static .google-review-card,
-  .google-proof-section .review-grid-static .google-review-card {
+  .google-proof-section .review-grid-static .google-review-card,
+  .category-block .formula-grid .formula-card,
+  .category-block .formula-grid--trio .formula-card {
     flex: 0 0 100% !important;
     width: 100% !important;
     max-width: 100% !important;
@@ -2325,14 +2329,16 @@ section[id],
   .formula-section .carousel-wrap,
   .team-section .carousel-wrap,
   .reviews-section .carousel-wrap,
-  .google-proof-section .carousel-wrap {
+  .google-proof-section .carousel-wrap,
+  .category-block .carousel-wrap {
     padding-bottom: 4.5rem;
   }
 
   .formula-section .carousel-arrow,
   .team-section .carousel-arrow,
   .reviews-section .carousel-arrow,
-  .google-proof-section .carousel-arrow {
+  .google-proof-section .carousel-arrow,
+  .category-block .carousel-arrow {
     top: auto !important;
     bottom: 0.25rem;
     width: 48px;
@@ -2343,21 +2349,24 @@ section[id],
   .formula-section .carousel-arrow.prev,
   .team-section .carousel-arrow.prev,
   .reviews-section .carousel-arrow.prev,
-  .google-proof-section .carousel-arrow.prev {
+  .google-proof-section .carousel-arrow.prev,
+  .category-block .carousel-arrow.prev {
     left: calc(50% - 58px) !important;
   }
 
   .formula-section .carousel-arrow.next,
   .team-section .carousel-arrow.next,
   .reviews-section .carousel-arrow.next,
-  .google-proof-section .carousel-arrow.next {
+  .google-proof-section .carousel-arrow.next,
+  .category-block .carousel-arrow.next {
     right: calc(50% - 58px) !important;
   }
 
   .formula-section .carousel-arrow:active,
   .team-section .carousel-arrow:active,
   .reviews-section .carousel-arrow:active,
-  .google-proof-section .carousel-arrow:active {
+  .google-proof-section .carousel-arrow:active,
+  .category-block .carousel-arrow:active {
     transform: scale(.94) !important;
   }
 
