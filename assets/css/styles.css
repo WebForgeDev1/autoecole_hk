@@ -540,19 +540,31 @@ main.page-main > section { min-width: 0; width: 100%; }
 
 /* ---------- category nav + stacked sections (formations.html) ---------- */
 .category-nav {
+  position: relative;
   display: flex; flex-wrap: wrap; justify-content: center; gap: 0.3rem;
   width: fit-content; max-width: 100%; margin: 0 auto 2.6rem;
   background: var(--panel); border: 1px solid var(--line-light); border-radius: 999px; padding: 0.35rem;
 }
+.category-nav-indicator {
+  position: absolute;
+  top: 0; left: 0;
+  border-radius: 999px;
+  background: #2563eb;
+  box-shadow: 0 6px 16px -6px rgba(37, 99, 235, 0.55);
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1), width 0.35s cubic-bezier(0.65, 0, 0.35, 1), height 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: 0;
+  pointer-events: none;
+}
 .category-nav a {
+  position: relative; z-index: 1;
   display: inline-flex; align-items: center; gap: 0.5rem;
   padding: 0.6rem 1.3rem; border-radius: 999px; font-weight: 600; font-size: 0.9rem;
   color: var(--ink-text-dim); background: transparent; border: none;
-  transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, transform 0.15s ease;
+  transition: color 0.25s ease, transform 0.15s ease;
 }
 .category-nav a:hover { color: var(--ink-text); }
 .category-nav a:active { transform: scale(0.96); }
-.category-nav a.active { background: #2563eb; color: #fff; box-shadow: 0 6px 16px -6px rgba(37, 99, 235, 0.55); }
+.category-nav a.active { color: #fff; }
 .category-nav a.active i { color: #fff; }
 .category-nav i { font-size: 1rem; color: var(--accent-strong); }
 @media (max-width: 640px) {
@@ -1891,6 +1903,7 @@ details[open] summary::after { transform: rotate(45deg); }
 
 @media (prefers-reduced-motion: reduce) {
   .category-nav a,
+  .category-nav-indicator,
   .category-block .formula-card {
     transition: none;
   }
