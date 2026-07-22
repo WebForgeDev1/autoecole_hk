@@ -95,6 +95,10 @@ body.no-scroll { overflow: hidden; }
 
 main.page-main { padding-top: var(--header-h); }
 body > main:not(.page-main) { padding-top: 0; }
+/* Flex children default to min-width:auto, so a section with a wide
+   horizontally-scrolling carousel can force the whole page to overflow
+   instead of shrinking to the viewport. */
+main.page-main > section { min-width: 0; width: 100%; }
 
 .section { padding: clamp(3.5rem, 8vw, 6rem) clamp(1.25rem, 4vw, 3rem); max-width: 90rem; margin: 0 auto; }
 @media (max-width: 900px) { .section { padding-top: 3.5rem; padding-bottom: 3.5rem; } }
@@ -2948,5 +2952,12 @@ section[id],
 
   .project-contact-actions .btn {
     width: 100%;
+  }
+}
+
+/* Contact page: hide the "Accès agence" practical-info block on mobile. */
+@media (max-width: 640px) {
+  .agency-info-section {
+    display: none;
   }
 }
