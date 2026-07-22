@@ -3081,3 +3081,35 @@ section[id],
     order: 1;
   }
 }
+
+/* Homepage "Nos formules": vertical stack of smaller, centered cards
+   instead of the full-width swipe carousel (unlike the formations page,
+   which keeps the carousel). !important overrides the scattered
+   carousel rules set for .formula-section elsewhere. */
+@media (max-width: 640px) {
+  .formula-section .formula-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 88% !important;
+    max-width: 19rem !important;
+    margin: 0 auto !important;
+    padding-inline: 0 !important;
+    gap: 1.2rem !important;
+    overflow: visible !important;
+  }
+
+  .formula-section .formula-grid .formula-card {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    scroll-snap-align: none !important;
+  }
+
+  .formula-section .carousel-arrow {
+    display: none !important;
+  }
+
+  .formula-section .carousel-wrap {
+    padding-bottom: 0 !important;
+  }
+}
