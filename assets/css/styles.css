@@ -2059,12 +2059,13 @@ details[open] summary::after { transform: rotate(45deg); }
   background: #f8fafc;
   opacity: 0;
   transform: translateX(28px);
-  animation: signup-screen-cycle 16s infinite ease-in-out;
+  animation: signup-screen-cycle 20s infinite ease-in-out;
 }
 
 .signup-screen-two { animation-delay: 4s; }
 .signup-screen-three { animation-delay: 8s; }
 .signup-screen-four { animation-delay: 12s; }
+.signup-screen-five { animation-delay: 16s; }
 
 .signup-progress {
   color: #2563eb;
@@ -2151,9 +2152,9 @@ details[open] summary::after { transform: rotate(45deg); }
 }
 
 @keyframes signup-screen-cycle {
-  0%, 21% { opacity: 1; transform: translateX(0); }
-  25%, 96% { opacity: 0; transform: translateX(-28px); }
-  97%, 100% { opacity: 0; transform: translateX(28px); }
+  0%, 17% { opacity: 1; transform: translateX(0); }
+  20%, 98% { opacity: 0; transform: translateX(-28px); }
+  99%, 100% { opacity: 0; transform: translateX(28px); }
 }
 
 @media (max-width: 900px) {
