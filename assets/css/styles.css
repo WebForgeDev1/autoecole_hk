@@ -1171,7 +1171,18 @@ details[open] summary::after { transform: rotate(45deg); }
 
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 2rem; padding: 2.2rem 0; }
 @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem 1.6rem; } }
-@media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr; gap: 1.8rem; } }
+@media (max-width: 640px) {
+  .footer-top { padding: 1.4rem 0; gap: 0.9rem; }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.4rem 1rem;
+    padding: 1.5rem 0;
+  }
+  .footer-newsletter, .footer-contact { grid-column: 1 / -1; }
+  .footer-heading { margin-bottom: 0.6rem; }
+  .footer-nav, .footer-contact { gap: 0.5rem; }
+  .footer-newsletter-text { margin-bottom: 0.7rem; }
+}
 .footer-heading { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-on-dark); margin-bottom: 0.9rem; }
 .footer-nav, .footer-contact { display: flex; flex-direction: column; gap: 0.6rem; }
 .footer-nav a { font-size: 0.88rem; color: var(--paper-text-dim); transition: color 0.15s ease; }
@@ -1199,7 +1210,10 @@ details[open] summary::after { transform: rotate(45deg); }
 .footer-legal a { font-size: 0.78rem; color: var(--paper-text-dim); transition: color 0.15s ease; }
 .footer-legal a:hover { color: var(--accent-on-dark); }
 .footer-agreement { font-size: 0.72rem; color: var(--paper-text-dim); opacity: 0.75; text-align: center; padding-bottom: 1.6rem; }
-@media (max-width: 640px) { .footer-bottom { flex-direction: column; text-align: center; } }
+@media (max-width: 640px) {
+  .footer-bottom { flex-direction: column; text-align: center; padding: 1rem 0; }
+  .footer-agreement { padding-bottom: 1rem; }
+}
 
 /* ==========================================================================
    Inner pages
