@@ -2968,3 +2968,15 @@ section[id],
     display: none;
   }
 }
+
+/* Contact page: on mobile, show the FAQ before the map/itinéraire section. */
+@media (max-width: 640px) {
+  .contact-page main.page-main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-layout {
+    order: 1;
+  }
+}
