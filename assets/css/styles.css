@@ -2344,6 +2344,15 @@ section[id],
     scroll-padding-inline: 0;
   }
 
+  /* overflow-x:auto on these tracks implicitly clips vertical overflow too,
+     cutting off the "Économique"/"Le plus choisi" badge that floats above
+     the card. Add top clearance so the badge isn't clipped. */
+  .formula-section .formula-grid,
+  .category-block .formula-grid,
+  .category-block .formula-grid--trio {
+    padding-top: 1.1rem;
+  }
+
   .formula-section .formula-grid .formula-card,
   .team-section .team-grid .team-card,
   .reviews-section .review-grid-static .google-review-card,
