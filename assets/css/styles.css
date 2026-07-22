@@ -3131,3 +3131,35 @@ section[id],
     line-height: 1.5;
   }
 }
+
+/* Reviews: keep the swipe carousel, but make each card noticeably more
+   compact (smaller avatar, tighter text, less padding). */
+@media (max-width: 640px) {
+  .reviews-section .google-review-card,
+  .google-proof-section .google-review-card {
+    padding: 1rem !important;
+    gap: 0.55rem !important;
+  }
+  .reviews-section .review-avatar,
+  .google-proof-section .review-avatar {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .reviews-section .review-meta strong,
+  .google-proof-section .review-meta strong {
+    font-size: 0.82rem !important;
+  }
+  .reviews-section .review-meta span,
+  .google-proof-section .review-meta span {
+    font-size: 0.66rem !important;
+  }
+  .reviews-section .review-stars,
+  .google-proof-section .review-stars {
+    font-size: 0.85rem !important;
+  }
+  .reviews-section .google-review-card blockquote,
+  .google-proof-section .google-review-card blockquote {
+    font-size: 0.85rem !important;
+    line-height: 1.45 !important;
+  }
+}
