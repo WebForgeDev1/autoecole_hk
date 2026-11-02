@@ -11,9 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" as="style">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
-  <link rel="preload" href="assets/css/styles.min.css" as="style">
-  <link rel="stylesheet" href="assets/css/styles.min.css" media="print" onload="this.media='all'; this.onload=null;">
-  <noscript><link rel="stylesheet" href="assets/css/styles.min.css"></noscript>
+  <link rel="preload" href="assets/css/styles.min.css?v=20261028-method" as="style">
+  <link rel="stylesheet" href="assets/css/styles.min.css?v=20261028-method" media="print" onload="this.media='all'; this.onload=null;">
+  <noscript><link rel="stylesheet" href="assets/css/styles.min.css?v=20261028-method"></noscript>
   <link rel="canonical" href="https://webforgedev1.github.io/final_web/resultats.html">
 </head>
 <body class="resultats-page">
@@ -140,13 +140,13 @@
     </div>
   </header>
   <main class="page-main" id="main">
-    <section class="section soft-section compact method-section">
-      <div class="section-head"><p class="eyebrow">Notre méthode</p><h2>Comment nous préparons chaque élève à réussir.</h2></div>
-      <div class="feature-grid">
-        <article><span><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#check"></use></svg></i></span><h3>Nous présentons à l'examen quand le niveau est prêt</h3><p>Nous ne présentons un élève que lorsque ses compétences sont stables et que les erreurs critiques sont corrigées.</p></article>
-        <article><span><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#refresh"></use></svg></i></span><h3>Nous faisons un bilan après chaque échec</h3><p>En cas d'échec, nous proposons systématiquement un bilan pour identifier les causes et organiser une reprise efficace.</p></article>
-        <article><span><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#document"></use></svg></i></span><h3>Nous suivons votre progression par livret de compétences</h3><p>Chaque élève dispose d'un livret qui trace ses acquis et ce qu'il reste à travailler avant l'examen.</p></article>
-        <article><span><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#calendar"></use></svg></i></span><h3>Nous actualisons nos chiffres chaque trimestre</h3><p>Nos indicateurs de réussite, de satisfaction et nos avis sont mis à jour chaque trimestre pour rester fiables.</p></article>
+    <section class="section soft-section compact method-section" aria-labelledby="method-title">
+      <div class="method-heading"><h2 id="method-title">Une méthode claire.<br><span>Des progrès à chaque étape.</span></h2><p>Un suivi concret pour vous préparer au jour de l’examen.</p></div>
+      <div class="method-grid">
+        <article><img src="assets/img/illustrations/sticker-unique-ready.png" alt="" aria-hidden="true" width="84" height="76" loading="lazy"><h3>L’examen au bon moment</h3><p>Nous vous présentons lorsque vos compétences sont stables et les erreurs critiques corrigées.</p></article>
+        <article><img src="assets/img/illustrations/sticker-unique-review.png" alt="" aria-hidden="true" width="84" height="76" loading="lazy"><h3>Un bilan pour rebondir</h3><p>Après un échec, nous identifions les points à retravailler pour préparer la suite.</p></article>
+        <article><img src="assets/img/illustrations/sticker-unique-progress.png" alt="" aria-hidden="true" width="84" height="76" loading="lazy"><h3>Vos progrès suivis</h3><p>Votre livret de compétences retrace vos acquis et les points à améliorer avant l’examen.</p></article>
+        <article><img src="assets/img/illustrations/sticker-unique-statistics.png" alt="" aria-hidden="true" width="84" height="76" loading="lazy"><h3>Des chiffres actualisés</h3><p>Nos indicateurs de réussite et de satisfaction sont mis à jour chaque trimestre.</p></article>
       </div>
     </section>
 
@@ -243,65 +243,29 @@
     <section class="success-loop">
       <div class="section-head">
         <p class="eyebrow">Galerie</p>
-        <h2>Ils l'ont eu.</h2>
+        <h2>En route vers le permis.</h2>
       </div>
       <div class="loop-viewport">
         <div class="loop-fade loop-fade-left" aria-hidden="true"></div>
         <div class="loop-fade loop-fade-right" aria-hidden="true"></div>
-        <!-- TODO: photos d'illustration temporaires (banque d'images générique, aucun lien avec de vrais élèves) — remplacer par les vraies photos d'élèves reçus (avec autorisation écrite) dès que possible -->
+        <!-- Photos réelles de la galerie ; seconde série dupliquée pour le défilement continu. -->
         <div class="loop-track" data-loop-track>
-          <article class="loop-card">
-            <div class="loop-photo"><picture><source srcset="assets/img/loop/lea.webp" type="image/webp"><img src="assets/img/loop/lea.jpg" alt="" loading="lazy" width="600" height="440"></picture></div>
-            <div class="loop-info"><strong>Léa</strong><span>Permis obtenu · Juin 2026</span></div>
-          </article>
-          <article class="loop-card">
-            <div class="loop-photo"><picture><source srcset="assets/img/loop/nathan.webp" type="image/webp"><img src="assets/img/loop/nathan.jpg" alt="" loading="lazy" width="600" height="440"></picture></div>
-            <div class="loop-info"><strong>Nathan</strong><span>Permis obtenu · Mai 2026</span></div>
-          </article>
-          <article class="loop-card">
-            <div class="loop-photo"><picture><source srcset="assets/img/loop/camille.webp" type="image/webp"><img src="assets/img/loop/camille.jpg" alt="" loading="lazy" width="600" height="440"></picture></div>
-            <div class="loop-info"><strong>Camille</strong><span>Permis obtenu · Avril 2026</span></div>
-          </article>
-          <article class="loop-card">
-            <div class="loop-photo"><picture><source srcset="assets/img/loop/yanis.webp" type="image/webp"><img src="assets/img/loop/yanis.jpg" alt="" loading="lazy" width="600" height="440"></picture></div>
-            <div class="loop-info"><strong>Yanis</strong><span>Permis obtenu · Mars 2026</span></div>
-          </article>
-          <article class="loop-card">
-            <div class="loop-photo"><picture><source srcset="assets/img/loop/chloe.webp" type="image/webp"><img src="assets/img/loop/chloe.jpg" alt="" loading="lazy" width="600" height="440"></picture></div>
-            <div class="loop-info"><strong>Chloé</strong><span>Permis obtenu · Février 2026</span></div>
-          </article>
-          <article class="loop-card">
-            <div class="loop-photo"><picture><source srcset="assets/img/loop/rayan.webp" type="image/webp"><img src="assets/img/loop/rayan.jpg" alt="" loading="lazy" width="600" height="440"></picture></div>
-            <div class="loop-info"><strong>Rayan</strong><span>Permis obtenu · Janvier 2026</span></div>
-          </article>
-          <article class="loop-card" aria-hidden="true">
-            <div class="loop-photo"><picture><source srcset="assets/img/loop/lea.webp" type="image/webp"><img src="assets/img/loop/lea.jpg" alt="" loading="lazy" width="600" height="440"></picture></div>
-            <div class="loop-info"><strong>Léa</strong><span>Permis obtenu · Juin 2026</span></div>
-          </article>
-          <article class="loop-card" aria-hidden="true">
-            <div class="loop-photo"><picture><source srcset="assets/img/loop/nathan.webp" type="image/webp"><img src="assets/img/loop/nathan.jpg" alt="" loading="lazy" width="600" height="440"></picture></div>
-            <div class="loop-info"><strong>Nathan</strong><span>Permis obtenu · Mai 2026</span></div>
-          </article>
-          <article class="loop-card" aria-hidden="true">
-            <div class="loop-photo"><picture><source srcset="assets/img/loop/camille.webp" type="image/webp"><img src="assets/img/loop/camille.jpg" alt="" loading="lazy" width="600" height="440"></picture></div>
-            <div class="loop-info"><strong>Camille</strong><span>Permis obtenu · Avril 2026</span></div>
-          </article>
-          <article class="loop-card" aria-hidden="true">
-            <div class="loop-photo"><picture><source srcset="assets/img/loop/yanis.webp" type="image/webp"><img src="assets/img/loop/yanis.jpg" alt="" loading="lazy" width="600" height="440"></picture></div>
-            <div class="loop-info"><strong>Yanis</strong><span>Permis obtenu · Mars 2026</span></div>
-          </article>
-          <article class="loop-card" aria-hidden="true">
-            <div class="loop-photo"><picture><source srcset="assets/img/loop/chloe.webp" type="image/webp"><img src="assets/img/loop/chloe.jpg" alt="" loading="lazy" width="600" height="440"></picture></div>
-            <div class="loop-info"><strong>Chloé</strong><span>Permis obtenu · Février 2026</span></div>
-          </article>
-          <article class="loop-card" aria-hidden="true">
-            <div class="loop-photo"><picture><source srcset="assets/img/loop/rayan.webp" type="image/webp"><img src="assets/img/loop/rayan.jpg" alt="" loading="lazy" width="600" height="440"></picture></div>
-            <div class="loop-info"><strong>Rayan</strong><span>Permis obtenu · Janvier 2026</span></div>
-          </article>
+          <article class="loop-card"><div class="loop-photo"><img src="assets/img/eleve-permis-obtenu.png" alt="Élève avec son moniteur dans la voiture Hk Conduite" loading="lazy" width="600" height="440" style="object-position: center 30%;"></div><div class="loop-info"><strong>En confiance</strong><span>Avec Hk Conduite</span></div></article>
+          <article class="loop-card"><div class="loop-photo"><img src="assets/img/eleve-reussite-hk-2026.jpg" alt="Élève devant l’agence avec son disque A" loading="lazy" width="600" height="440" style="object-position: center 30%;"></div><div class="loop-info"><strong>Le permis en poche</strong><span>Une nouvelle route commence</span></div></article>
+          <article class="loop-card"><div class="loop-photo"><img src="assets/img/eleve-hk-voiture-2026.jpg" alt="Élève au volant, visage flouté" loading="lazy" width="600" height="440" style="object-position: center 30%;"></div><div class="loop-info"><strong>Au volant</strong><span>Chaque leçon fait avancer</span></div></article>
+          <article class="loop-card"><div class="loop-photo"><img src="assets/img/eleve-permis-obtenu.png" alt="Élève avec son moniteur dans la voiture Hk Conduite" loading="lazy" width="600" height="440" style="object-position: center 30%;"></div><div class="loop-info"><strong>En confiance</strong><span>Avec Hk Conduite</span></div></article>
+          <article class="loop-card"><div class="loop-photo"><img src="assets/img/eleve-reussite-hk-2026.jpg" alt="Élève devant l’agence avec son disque A" loading="lazy" width="600" height="440" style="object-position: center 30%;"></div><div class="loop-info"><strong>Le permis en poche</strong><span>Une nouvelle route commence</span></div></article>
+          <article class="loop-card"><div class="loop-photo"><img src="assets/img/eleve-hk-voiture-2026.jpg" alt="Élève au volant, visage flouté" loading="lazy" width="600" height="440" style="object-position: center 30%;"></div><div class="loop-info"><strong>Au volant</strong><span>Chaque leçon fait avancer</span></div></article>
+          <article class="loop-card" aria-hidden="true"><div class="loop-photo"><img src="assets/img/eleve-permis-obtenu.png" alt="Élève avec son moniteur dans la voiture Hk Conduite" loading="lazy" width="600" height="440" style="object-position: center 30%;"></div><div class="loop-info"><strong>En confiance</strong><span>Avec Hk Conduite</span></div></article>
+          <article class="loop-card" aria-hidden="true"><div class="loop-photo"><img src="assets/img/eleve-reussite-hk-2026.jpg" alt="Élève devant l’agence avec son disque A" loading="lazy" width="600" height="440" style="object-position: center 30%;"></div><div class="loop-info"><strong>Le permis en poche</strong><span>Une nouvelle route commence</span></div></article>
+          <article class="loop-card" aria-hidden="true"><div class="loop-photo"><img src="assets/img/eleve-hk-voiture-2026.jpg" alt="Élève au volant, visage flouté" loading="lazy" width="600" height="440" style="object-position: center 30%;"></div><div class="loop-info"><strong>Au volant</strong><span>Chaque leçon fait avancer</span></div></article>
+          <article class="loop-card" aria-hidden="true"><div class="loop-photo"><img src="assets/img/eleve-permis-obtenu.png" alt="Élève avec son moniteur dans la voiture Hk Conduite" loading="lazy" width="600" height="440" style="object-position: center 30%;"></div><div class="loop-info"><strong>En confiance</strong><span>Avec Hk Conduite</span></div></article>
+          <article class="loop-card" aria-hidden="true"><div class="loop-photo"><img src="assets/img/eleve-reussite-hk-2026.jpg" alt="Élève devant l’agence avec son disque A" loading="lazy" width="600" height="440" style="object-position: center 30%;"></div><div class="loop-info"><strong>Le permis en poche</strong><span>Une nouvelle route commence</span></div></article>
+          <article class="loop-card" aria-hidden="true"><div class="loop-photo"><img src="assets/img/eleve-hk-voiture-2026.jpg" alt="Élève au volant, visage flouté" loading="lazy" width="600" height="440" style="object-position: center 30%;"></div><div class="loop-info"><strong>Au volant</strong><span>Chaque leçon fait avancer</span></div></article>
         </div>
       </div>
       <div style="text-align:center; margin-top: 2rem;">
-        <a href="galerie.html" class="btn secondary link-arrow">Voir toutes les réussites
+        <a href="galerie.html" class="btn secondary link-arrow">Voir la galerie
           <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M15 5L10.5 1M15 5L10.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -359,6 +323,8 @@
         <div class="footer-contact">
           <p class="footer-heading">Nous contacter</p>
           <a href="tel:+33789530417"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i>07 89 53 04 17</a>
+          <a href="tel:+33699378343"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i>06 99 37 83 43</a>
+          <a href="mailto:hkconduite@outlook.fr"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#mail"></use></svg></i>hkconduite@outlook.fr</a>
           <span><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#pin"></use></svg></i>48 bis Rue Marcel Proust, 72000 Le Mans</span>
           <span><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#clock"></use></svg></i>Lun-Ven 10h-19h · Sam 10h-13h</span>
         </div>
@@ -371,8 +337,9 @@
           <a href="cgv.html">CGV</a>
         </div>
       </div>
-      <p class="footer-agreement">Agrément préfectoral n° [TODO — obligatoire légalement, à fournir par le client]</p>
+      <p class="footer-agreement">Agrément préfectoral n° E2507200130</p>
     </div>
+    <div class="footer-landscape" aria-hidden="true"><img src="assets/img/illustrations/footer-road.jpg" alt="" width="2172" height="724" loading="lazy" decoding="async"></div>
   </footer>
   <div class="mobile-cta-bar">
     <a class="btn secondary" href="tel:+33789530417"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i>Appeler</a>

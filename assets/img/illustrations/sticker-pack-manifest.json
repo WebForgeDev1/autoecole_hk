@@ -1,0 +1,120 @@
+{
+  "generator": "Imagegen intégré",
+  "style": "Emerald green, navy, mint, white outline, transparent background, individual cartoon stickers. No readable text.",
+  "prompts": [
+    [
+      "evaluation",
+      "A dashboard speedometer with a small magnifying glass, representing an initial driving skills assessment."
+    ],
+    [
+      "referral",
+      "A green gift box with navy ribbon and a single small car key, representing a referral reward."
+    ],
+    [
+      "documents",
+      "An open navy folder containing tidy white paperwork with a green paperclip, representing registration documents."
+    ],
+    [
+      "contact",
+      "A green speech bubble with a navy telephone receiver, representing contacting a driving school."
+    ],
+    [
+      "gallery",
+      "A navy camera with a small green celebratory star, representing sharing a success photo."
+    ],
+    [
+      "ready",
+      "A small emerald trophy beside a green finish flag, representing readiness for a driving exam."
+    ],
+    [
+      "review",
+      "A navy magnifying glass over a small green road diagram, representing reviewing driving mistakes."
+    ],
+    [
+      "progress",
+      "A navy spiral notebook with a mint upward progress arrow, representing a learner progress journal."
+    ],
+    [
+      "statistics",
+      "A miniature green bar chart on a navy presentation board, representing updated driving school statistics."
+    ],
+    [
+      "manual",
+      "A manual car gearshift knob and lever, navy with emerald details, representing manual transmission."
+    ],
+    [
+      "automatic",
+      "An automatic transmission selector with a green rounded gear symbol, representing automatic driving. No letters."
+    ],
+    [
+      "aac",
+      "Two friendly simplified adult people seated side by side behind a small steering wheel, representing accompanied driving."
+    ],
+    [
+      "supervised",
+      "A navy winding road with a green guidepost and small compass, representing supervised driving practice."
+    ],
+    [
+      "online-code",
+      "An open navy laptop displaying a green road sign quiz, representing online driving theory practice."
+    ]
+  ],
+  "outputs": [
+    {
+      "name": "evaluation",
+      "path": "/Users/mr_rahmani/.codex/generated_images/01a17f4f-5e9f-7a02-9417-e1feb0423922/exec-fd434733-2a6b-451c-817f-d05c17b4601b.png"
+    },
+    {
+      "name": "referral",
+      "path": "/Users/mr_rahmani/.codex/generated_images/01a17f4f-5e9f-7a02-9417-e1feb0423922/exec-26128941-bedc-4660-8258-ac753c483347.png"
+    },
+    {
+      "name": "documents",
+      "path": "/Users/mr_rahmani/.codex/generated_images/01a17f4f-5e9f-7a02-9417-e1feb0423922/exec-03f6abc2-0949-4ffe-b1cc-10969b0c268b.png"
+    },
+    {
+      "name": "contact",
+      "path": "/Users/mr_rahmani/.codex/generated_images/01a17f4f-5e9f-7a02-9417-e1feb0423922/exec-499da5f6-bec0-4c57-9a1d-71c60a9e153f.png"
+    },
+    {
+      "name": "gallery",
+      "path": "/Users/mr_rahmani/.codex/generated_images/01a17f4f-5e9f-7a02-9417-e1feb0423922/exec-03d749cf-adb3-4cdf-b471-dd75606fa6a7.png"
+    },
+    {
+      "name": "ready",
+      "path": "/Users/mr_rahmani/.codex/generated_images/01a17f4f-5e9f-7a02-9417-e1feb0423922/exec-6071f29c-2518-46b6-b184-d8c85dc986b1.png"
+    },
+    {
+      "name": "review",
+      "path": "/Users/mr_rahmani/.codex/generated_images/01a17f4f-5e9f-7a02-9417-e1feb0423922/exec-ff5e97ba-266a-4e15-9ff0-3eb997c3e8e0.png"
+    },
+    {
+      "name": "progress",
+      "path": "/Users/mr_rahmani/.codex/generated_images/01a17f4f-5e9f-7a02-9417-e1feb0423922/exec-9cf84795-27a6-49fb-956a-7af6d6c54a44.png"
+    },
+    {
+      "name": "statistics",
+      "path": "/Users/mr_rahmani/.codex/generated_images/01a17f4f-5e9f-7a02-9417-e1feb0423922/exec-ab269d8f-e47c-44cb-9751-8449177715f3.png"
+    },
+    {
+      "name": "manual",
+      "path": "/Users/mr_rahmani/.codex/generated_images/01a17f4f-5e9f-7a02-9417-e1feb0423922/exec-d5714e3d-88e0-4a66-8c01-60d037ce7017.png"
+    },
+    {
+      "name": "automatic",
+      "path": "/Users/mr_rahmani/.codex/generated_images/01a17f4f-5e9f-7a02-9417-e1feb0423922/exec-85c5db07-3ad3-46d2-811b-78647cc972ba.png"
+    },
+    {
+      "name": "aac",
+      "path": "/Users/mr_rahmani/.codex/generated_images/01a17f4f-5e9f-7a02-9417-e1feb0423922/exec-238d0880-d5d7-480a-9853-6c6587a4ace0.png"
+    },
+    {
+      "name": "supervised",
+      "path": "/Users/mr_rahmani/.codex/generated_images/01a17f4f-5e9f-7a02-9417-e1feb0423922/exec-b8652220-b448-4218-9049-15560d103c58.png"
+    },
+    {
+      "name": "online-code",
+      "path": "/Users/mr_rahmani/.codex/generated_images/01a17f4f-5e9f-7a02-9417-e1feb0423922/exec-68e52e98-6834-4416-9fa0-ae1d44128efa.png"
+    }
+  ]
+}

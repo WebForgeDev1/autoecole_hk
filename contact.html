@@ -11,9 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" as="style">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
-  <link rel="preload" href="assets/css/styles.min.css" as="style">
-  <link rel="stylesheet" href="assets/css/styles.min.css" media="print" onload="this.media='all'; this.onload=null;">
-  <noscript><link rel="stylesheet" href="assets/css/styles.min.css"></noscript>
+  <link rel="preload" href="assets/css/styles.min.css?v=20261028-practical" as="style">
+  <link rel="stylesheet" href="assets/css/styles.min.css?v=20261028-practical" media="print" onload="this.media='all'; this.onload=null;">
+  <noscript><link rel="stylesheet" href="assets/css/styles.min.css?v=20261028-practical"></noscript>
   <link rel="canonical" href="https://webforgedev1.github.io/final_web/contact.html">
 </head>
 <body class="contact-page">
@@ -146,7 +146,41 @@
       <div class="contact-intro">
         <p class="eyebrow">Contact</p>
         <h2>Parlons de votre <span>projet de permis.</span></h2>
-        <p>Une question sur le code, le permis B, la boîte automatique ou la conduite accompagnée ? Notre équipe vous répond sous 24h.</p>
+        <p>Une question sur le code, le permis B, la boîte automatique ou la conduite accompagnée ? Notre équipe vous répond dès que possible.</p>
+      <div class="documents-card">
+        <p class="eyebrow">Dossier</p>
+        <img class="document-sticker" src="assets/img/illustrations/sticker-unique-documents.png" alt="" aria-hidden="true" width="78" height="68" loading="lazy">
+        <h2 id="documents-inscription">Documents à préparer</h2>
+        <div class="document-profile" data-document-profile>
+          <fieldset>
+            <legend>Déjà un numéro NEPH ?</legend>
+            <div class="document-choices">
+              <label><input type="radio" name="document-neph" value="yes"><span>Oui</span></label>
+              <label><input type="radio" name="document-neph" value="no"><span>Non</span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Vous êtes</legend>
+            <div class="document-choices">
+              <label><input type="radio" name="document-age" value="minor"><span>Mineur</span></label>
+              <label><input type="radio" name="document-age" value="adult"><span>Majeur</span></label>
+            </div>
+          </fieldset>
+        </div>
+        <ul data-document-list aria-live="polite" aria-relevant="additions removals" aria-label="Documents selon votre profil">
+          <li>Pièce d’identité valide (recto verso)</li>
+          <li data-neph-document hidden>Attestation NEPH</li>
+          <li>Résultat du code, si obtenu</li>
+          <li data-first-registration>Justificatif de domicile (moins de 6 mois)</li>
+          <li data-first-registration>E-photo ANTS</li>
+          <li data-first-registration>ASSR2 / ASR (premier permis, moins de 21 ans)</li>
+          <li data-first-registration data-jdc>JDC (Français, 17–24 ans)</li>
+          <li data-minor-document>Pièce d’identité du représentant légal (recto verso)</li>
+          <li data-first-registration>Justificatif de séjour / présence (étrangers)</li>
+          <li>Avis médical si nécessaire</li>
+        </ul>
+        <p class="document-profile-note" data-document-note>Sélectionnez votre profil.</p>
+      </div>
         <div class="info-card-list">
           <div class="info-card">
             <span class="icon-badge"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#pin"></use></svg></i></span>
@@ -159,7 +193,7 @@
             <span class="icon-badge"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i></span>
             <div>
               <h3>Téléphone</h3>
-              <p><a href="tel:+33789530417">07 89 53 04 17</a></p>
+              <p><a href="tel:+33789530417">07 89 53 04 17</a><br><a href="tel:+33699378343">06 99 37 83 43</a></p>
             </div>
           </div>
           <div class="info-card">
@@ -171,27 +205,38 @@
           </div>
         </div>
         <div class="hours-pill"><span class="status-dot" aria-hidden="true"></span>Lun-Ven 10h-19h · Sam 10h-13h</div>
+
       </div>
       <!-- TODO: remplacer PLACEHOLDER par le véritable ID de formulaire Formspree du client -->
-      <form class="contact-card form-card" action="https://formspree.io/f/PLACEHOLDER" method="POST" data-contact-form>
-        <h2>Envoyez-nous un message</h2>
+      <form id="demande" class="contact-card form-card" action="https://formspree.io/f/PLACEHOLDER" method="POST" data-contact-form>
+        <div class="sticker-title-row"><h2>Envoyez-nous un message</h2><img class="context-sticker" src="assets/img/illustrations/sticker-unique-contact.png" alt="" aria-hidden="true" width="64" height="64" loading="lazy"></div>
         <p>Remplissez le formulaire ci-dessous, nous vous recontactons rapidement.</p>
         <p class="calendly-fallback">Vous préférez réserver directement ? <a href="https://calendly.com/hk-conduite/30min" target="_blank" rel="noopener">Choisissez votre créneau en ligne</a>.</p>
         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="form-row">
-          <label>Prénom <span class="req">*</span><input type="text" name="firstname" placeholder="Jean" required minlength="2" autocomplete="given-name"></label>
-          <label>Nom <span class="req">*</span><input type="text" name="lastname" placeholder="Dupont" required minlength="2" autocomplete="family-name"></label>
+          <label><span>Prénom <span class="req" aria-hidden="true">*</span></span><input type="text" name="firstname" placeholder="Jean" required minlength="2" autocomplete="given-name"></label>
+          <label><span>Nom <span class="req" aria-hidden="true">*</span></span><input type="text" name="lastname" placeholder="Dupont" required minlength="2" autocomplete="family-name"></label>
         </div>
-        <label>Email <span class="req">*</span><input type="email" name="email" placeholder="jean.dupont@email.com" required autocomplete="email" inputmode="email" autocapitalize="off" autocorrect="off"></label>
-        <label>Téléphone <span class="req">*</span><input type="tel" name="phone" placeholder="06 12 34 56 78" required pattern="[0-9 +().-]{6,}" autocomplete="tel" inputmode="tel"></label>
-        <label>Formule souhaitée<select name="project"><option value="">Choisir une formule...</option><option>Permis B manuel</option><option>Permis B automatique</option><option>Code</option><option>Conduite accompagnée</option><option>Évaluation de niveau</option></select></label>
-        <label>Message <span class="req">*</span><textarea name="message" rows="5" placeholder="Décrivez votre projet, vos disponibilités, vos objectifs..." required></textarea></label>
+        <label><span>Email <span class="req" aria-hidden="true">*</span></span><input type="email" name="email" placeholder="jean.dupont@email.com" required autocomplete="email" inputmode="email" autocapitalize="off" autocorrect="off"></label>
+        <label><span>Téléphone <span class="req" aria-hidden="true">*</span></span><input type="tel" name="phone" placeholder="06 12 34 56 78" required pattern="[0-9 +().-]{6,}" autocomplete="tel" inputmode="tel"></label>
+        <label>Formule souhaitée<select name="project"><option value="">Choisir une formule...</option><option>Permis B manuel</option><option>Permis B automatique</option><option>Code</option><option>Conduite accompagnée</option><option value="evaluation">Évaluation : offerte avec une formule, sinon 45 €</option><option value="parrainage">Parrainage</option></select></label>
+        <label data-referral-field hidden>Nom et prénom du parrain (facultatif)<input disabled type="text" name="parrain" maxlength="120" placeholder="La personne qui vous recommande Hk Conduite" aria-describedby="parrain-help"></label>
+        <p id="parrain-help" class="form-rgpd" data-referral-field hidden>Indiquez le nom et le prénom de la personne qui vous recommande Hk Conduite : elle bénéficie d’une heure de conduite offerte pour votre parrainage.</p>
+        <label><span>Message <span class="req" aria-hidden="true">*</span></span><textarea name="message" rows="5" placeholder="Décrivez votre projet, vos disponibilités, vos objectifs..." required></textarea></label>
         <button class="btn primary" type="submit">Envoyer ma demande <i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></i></button>
         <p class="form-rgpd">En envoyant ce formulaire, vous acceptez notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
-        <p class="form-note" data-form-note></p>
+        <p class="form-note" data-form-note role="status" aria-live="polite"></p>
       </form>
     </section>
-    <section class="contact-layout">
+    <section class="section compact">
+      <div class="section-head"><p class="eyebrow">Avant de nous écrire</p><h2>Questions fréquentes.</h2></div>
+      <div class="faq mini-faq" style="max-width: 48rem; margin: 2rem auto 0;">
+        <details><summary><span>Quels documents préparer ?</span></summary><p>La liste varie selon votre profil. <a class="document-profile-link" href="#documents-inscription">Voir les documents à préparer</a>. Pour vérifier votre dossier, le mieux est de passer à l’agence avec vos documents.</p></details>
+        <details><summary><span>Combien d'heures de conduite faut-il ?</span></summary><p>Le minimum légal est de <strong>20 heures en boîte manuelle</strong> et <strong>13 heures en boîte automatique</strong>, sauf exceptions. Le nombre d'heures peut varier selon votre niveau et votre progression, évalués en début de formation.</p></details>
+        <details><summary><span>Peut-on commencer rapidement ?</span></summary><p>Oui, selon les disponibilités du planning et sous réserve d’un dossier complet. Notre <strong>formule accélérée</strong> permet également de suivre la formation à un rythme plus intensif.</p></details>
+      </div>
+    </section>
+    <section class="contact-layout" id="nos-agences">
       <div class="map-card">
         <iframe class="map-embed" src="https://www.google.com/maps?q=48+bis+Rue+Marcel+Proust%2C+72000+Le+Mans&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation Hk Conduite Le Mans"></iframe>
         <div class="map-info">
@@ -201,35 +246,25 @@
           <a class="btn primary" href="https://www.google.com/maps/dir/?api=1&destination=48+bis+Rue+Marcel+Proust%2C+72000+Le+Mans" target="_blank" rel="noopener">Itinéraire <i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></i></a>
         </div>
       </div>
-      <div class="documents-card">
-        <p class="eyebrow">Dossier</p>
-        <span class="icon-badge"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#document"></use></svg></i></span>
-        <h2>Documents à préparer</h2>
-        <ul>
-          <li>Pièce d'identité recto-verso valide</li>
-          <li>Justificatif de domicile récent</li>
-          <li>Photo-signature numérique ANTS</li>
-          <li>ASSR 2 ou ASR selon âge et situation</li>
-          <li>Attestation de recensement ou JDC si nécessaire</li>
-        </ul>
+
+      <div class="map-card">
+        <iframe class="map-embed" src="https://www.google.com/maps?q=1+Avenue+Guy+Bouriat%2C+72530+Yvr%C3%A9-l%27%C3%89v%C3%AAque&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation Hk Conduite Yvré-l'Évêque"></iframe>
+        <div class="map-info">
+          <h2>Hk Conduite · Yvré-l'Évêque</h2>
+          <p>1 avenue Guy Bouriat, 72530 Yvré-l'Évêque</p>
+          <a class="btn primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=1+Avenue+Guy+Bouriat%2C+72530+Yvr%C3%A9-l%27%C3%89v%C3%AAque" target="_blank" rel="noopener" aria-label="Itinéraire vers Hk Conduite à Yvré-l'Évêque">Itinéraire <i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></i></a>
+        </div>
       </div>
     </section>
-    <section class="section compact">
-      <div class="section-head"><p class="eyebrow">Avant de nous écrire</p><h2>Questions fréquentes.</h2></div>
-      <div class="faq mini-faq" style="max-width: 48rem; margin: 2rem auto 0;">
-        <details><summary><span>Quels documents préparer ?</span></summary><p>Pièce d'identité, justificatif de domicile, photo numérique ANTS et ASSR selon votre situation.</p></details>
-        <details><summary><span>Combien d'heures faut-il ?</span></summary><p>Le minimum légal est de 20h en manuel et 13h en automatique. Le volume exact dépend de l'évaluation.</p></details>
-        <details><summary><span>Peut-on commencer rapidement ?</span></summary><p>Oui, selon les disponibilités du planning et les documents fournis.</p></details>
-      </div>
-    </section>
-    <section class="section soft-section compact agency-info-section">
-      <div class="section-head"><p class="eyebrow">Accès agence</p><h2>Informations pratiques à afficher clairement.</h2><p>Un bon contact ne se limite pas au formulaire. Il faut aussi donner les horaires, les documents, la zone desservie et le délai de réponse.</p></div>
-      <div class="included-list cols-4">
-        <div><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#pin"></use></svg></i><strong>Secteur</strong><span>48 bis Rue Marcel Proust, 72000 Le Mans, et les alentours.</span></div>
-        <div><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#clock"></use></svg></i><strong>Horaires</strong><span>Lundi au vendredi 10h-19h, samedi 10h-13h.</span></div>
-        <div><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i><strong>Délai de rappel</strong><span>Réponse sous 24h ouvrables pour les demandes en ligne.</span></div>
-        <!-- TODO: confirmer l'adresse email définitive avec le client -->
-        <div><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#mail"></use></svg></i><strong>Email</strong><span>contact@hkconduite.fr</span></div>
+    <section class="section soft-section compact agency-info-section" aria-labelledby="agency-info-title">
+      <div class="agency-info-inner">
+        <div class="agency-info-heading"><h2 id="agency-info-title">Préparez votre visite.</h2><p>Les informations utiles pour nous rencontrer ou nous contacter.</p></div>
+        <div class="agency-practical-grid">
+          <div><span class="practical-icon" aria-hidden="true"><svg class="icon"><use href="#pin"></use></svg></span><h3>Nos deux agences</h3><p>Le Mans et Yvré-l’Évêque.</p><a href="#nos-agences">Adresses et itinéraires <span aria-hidden="true">→</span></a></div>
+          <div><span class="practical-icon" aria-hidden="true"><svg class="icon"><use href="#clock"></use></svg></span><h3>Horaires d’accueil</h3><p>Lun–Ven : 10 h–19 h<br>Samedi : 10 h–13 h</p></div>
+          <div><span class="practical-icon" aria-hidden="true"><svg class="icon"><use href="#phone"></use></svg></span><h3>On vous rappelle</h3><p>Laissez-nous un message.<br>Nous vous répondons dès que possible.</p><a href="#demande">Être recontacté <span aria-hidden="true">→</span></a></div>
+          <div><span class="practical-icon" aria-hidden="true"><svg class="icon"><use href="#mail"></use></svg></span><h3>Par email</h3><p>Une question sur votre inscription ou votre formation ?</p><a href="mailto:hkconduite@outlook.fr">hkconduite@outlook.fr</a></div>
+        </div>
       </div>
     </section>
   </main>
@@ -273,6 +308,8 @@
         <div class="footer-contact">
           <p class="footer-heading">Nous contacter</p>
           <a href="tel:+33789530417"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i>07 89 53 04 17</a>
+          <a href="tel:+33699378343"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i>06 99 37 83 43</a>
+          <a href="mailto:hkconduite@outlook.fr"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#mail"></use></svg></i>hkconduite@outlook.fr</a>
           <span><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#pin"></use></svg></i>48 bis Rue Marcel Proust, 72000 Le Mans</span>
           <span><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#clock"></use></svg></i>Lun-Ven 10h-19h · Sam 10h-13h</span>
         </div>
@@ -285,8 +322,9 @@
           <a href="cgv.html">CGV</a>
         </div>
       </div>
-      <p class="footer-agreement">Agrément préfectoral n° [TODO — obligatoire légalement, à fournir par le client]</p>
+      <p class="footer-agreement">Agrément préfectoral n° E2507200130</p>
     </div>
+    <div class="footer-landscape" aria-hidden="true"><img src="assets/img/illustrations/footer-road.jpg" alt="" width="2172" height="724" loading="lazy" decoding="async"></div>
   </footer>
   <div class="mobile-cta-bar">
     <a class="btn secondary" href="tel:+33789530417"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i>Appeler</a>
@@ -294,6 +332,7 @@
   </div>
   <script src="assets/js/road-canvas.js" defer></script>
   <script src="assets/js/dock-nav.js" defer></script>
+  <script src="assets/js/document-profile.js" defer></script>
   <script src="script.js" defer></script>
 </body>
 </html>

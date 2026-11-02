@@ -1,0 +1,48 @@
+/* Real student photographs: composed mosaic with a full-height portrait. */
+.success-gallery-section { max-width: 80rem; }
+.success-gallery-heading { max-width: 70rem; display: flex; justify-content: space-between; align-items: flex-end; gap: 1.5rem; margin: 0 auto 2rem; }
+.success-gallery-heading h2 { font-size: clamp(1.9rem, 3.5vw, 3rem); line-height: 1.13; letter-spacing: -0.03em; }
+.success-gallery-heading h2 span { color: #17803d; }
+.success-gallery-heading p { margin-top: 0.9rem; color: var(--ink-text-dim); line-height: 1.6; font-size: 0.95rem; }
+.gallery-view-hint { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--ink-text-dim); font-size: 0.78rem; flex: none; padding-bottom: 0.25rem; }
+.success-gallery-section .real-success-gallery { display: grid; grid-template-columns: 1.12fr 0.88fr; grid-template-areas: "lesson portrait" "drive portrait"; gap: 1.5rem; }
+.success-shot--lesson { grid-area: lesson; }
+.success-shot--portrait { grid-area: portrait; }
+.success-shot--drive { grid-area: drive; }
+.success-gallery-section .success-shot { display: flex; flex-direction: column; min-width: 0; }
+.success-photo-link { display: block; position: relative; height: 270px; overflow: hidden; border-radius: 14px; background: #edf2ee; cursor: zoom-in; }
+.success-shot--portrait .success-photo-link { height: auto; flex: 1; min-height: 540px; }
+.success-gallery-section .real-success-gallery picture { width: 100%; height: 100%; }
+.success-gallery-section .real-success-gallery img { width: 100%; height: 100%; max-height: none; object-fit: cover; border-radius: 0; transition: transform 450ms ease; }
+.success-gallery-section .success-shot--lesson img { object-position: center 25% !important; }
+.success-gallery-section .success-shot--portrait img { position: absolute; inset: 0; object-position: center 45%; }
+.success-gallery-section .success-shot--drive img { object-position: center 38%; }
+.success-photo-link:hover img { transform: scale(1.025); }
+.success-photo-link:focus-visible { outline: 3px solid #17803d; outline-offset: 4px; }
+.success-photo-zoom { position: absolute; bottom: 0.85rem; right: 0.85rem; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: #fff; color: #142e20; }
+.success-gallery-section .real-success-gallery figcaption { display: flex; flex-direction: column; gap: 0.25rem; padding: 0.9rem 0 0.1rem; }
+.real-success-gallery figcaption strong { font-size: 0.97rem; font-weight: 600; color: var(--ink-text); }
+.real-success-gallery figcaption span { font-size: 0.81rem; color: var(--ink-text-dim); }
+.success-lightbox { width: min(1100px, 94vw); max-width: 94vw; max-height: 94dvh; padding: 3.5rem 3.25rem 1.25rem; border: 0; border-radius: 14px; background: #0f172a; color: #fff; }
+.success-lightbox::backdrop { background: rgba(7, 13, 24, 0.85); }
+.success-lightbox figure { margin: 0; }
+.success-lightbox figure img { display: block; max-width: 100%; width: auto; height: auto; max-height: 72dvh; object-fit: contain; margin: 0 auto; }
+.success-lightbox figcaption { text-align: center; padding-top: 0.9rem; color: #e2e8f0; font-size: 0.85rem; }
+.success-lightbox button { position: absolute; display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0.5rem; border: 0; background: #20324a; color: #fff; border-radius: 8px; cursor: pointer; }
+.success-lightbox button:hover { background: #31506c; }
+.success-lightbox button:focus-visible { outline: 2px solid #86efac; outline-offset: 3px; }
+.lightbox-close { top: 0.5rem; right: 0.75rem; gap: 0.75rem; font-size: 0.8rem; }
+.lightbox-close span { font-size: 1.5rem; }
+.lightbox-prev { left: 0.4rem; top: 45%; }
+.lightbox-next { right: 0.4rem; top: 45%; }
+@media (max-width: 640px) {
+ .success-gallery-heading { flex-direction: column; align-items: flex-start; gap: 1rem; }
+ .success-gallery-section .real-success-gallery { grid-template-columns: 1fr; grid-template-areas: "portrait" "lesson" "drive"; gap: 1.75rem; }
+ .success-shot--portrait .success-photo-link { min-height: 0; height: auto; aspect-ratio: 3 / 4; flex: none; }
+ .success-photo-link { height: auto; aspect-ratio: 4 / 3; }
+ .success-lightbox { padding: 3.75rem 0.5rem 4rem; }
+ .lightbox-prev, .lightbox-next { top: auto; bottom: 0.5rem; }
+ .lightbox-prev { left: calc(50% - 52px); }
+ .lightbox-next { right: calc(50% - 52px); }
+}
+@media (prefers-reduced-motion: reduce) { .success-gallery-section .real-success-gallery img { transition: none; } .success-photo-link:hover img { transform: none; } }

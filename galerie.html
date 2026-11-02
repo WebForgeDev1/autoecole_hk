@@ -11,10 +11,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" as="style">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
-  <link rel="preload" href="assets/css/styles.min.css" as="style">
-  <link rel="stylesheet" href="assets/css/styles.min.css" media="print" onload="this.media='all'; this.onload=null;">
-  <noscript><link rel="stylesheet" href="assets/css/styles.min.css"></noscript>
+  <link rel="preload" href="assets/css/styles.min.css?v=20261028-gallery-layout" as="style">
+  <link rel="stylesheet" href="assets/css/styles.min.css?v=20261028-gallery-layout">
+  <noscript><link rel="stylesheet" href="assets/css/styles.min.css?v=20261028-gallery-layout"></noscript>
   <link rel="canonical" href="https://webforgedev1.github.io/final_web/galerie.html">
+  <link rel="stylesheet" href="assets/css/gallery-layout.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Aller au contenu</a>
@@ -141,48 +142,31 @@
       <p class="eyebrow">Galerie</p>
       <h1>Nos élèves qui ont obtenu le permis.</h1>
     </section>
-    <section class="section compact">
-      <article class="gallery-feature">
-        <picture><source srcset="assets/img/eleve-permis-obtenu-640.webp 640w, assets/img/eleve-permis-obtenu.webp 1086w" sizes="100vw" type="image/webp"><img src="assets/img/eleve-permis-obtenu.png" alt="Élève de Hk Conduite avec son moniteur dans le véhicule auto-école" width="1086" height="1448" decoding="async" style="object-position: center 18%;"></picture>
-        <div>
-          <span>Permis obtenu</span>
-          <h3>Bravo aux élèves accompagnés par Hk Conduite</h3>
-          <p>D'autres photos réelles des élèves reçus seront ajoutées ici au fur et à mesure, avec leur autorisation.</p>
-        </div>
-      </article>
-    </section>
-    <section class="section compact team-section">
-      <div class="section-head"><p class="eyebrow">Équipe</p><h2>Trois moniteurs diplômés d'État.</h2><p>Une équipe expérimentée, patiente et à l'écoute, qui accompagne chaque élève jusqu'à l'examen.</p></div>
-      <!-- TODO: confirmer prénoms et spécialités de chaque moniteur avec le client -->
-      <div class="carousel-wrap">
-        <button type="button" class="carousel-arrow prev" aria-label="Carte précédente" disabled>
-          <svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg>
-        </button>
-        <div class="team-grid">
-          <article class="team-card">
-            <div class="team-photo"><picture><source srcset="assets/img/team/moniteur-1.webp" type="image/webp"><img src="assets/img/team/moniteur-1.png" alt="Moniteur Hk Conduite" width="220" height="340" loading="lazy" decoding="async"></picture></div>
-            <h3>Prénom</h3>
-            <p class="team-role">Moniteur diplômé d'État · Formation boîte manuelle</p>
-          </article>
-          <article class="team-card">
-            <div class="team-photo"><picture><source srcset="assets/img/team/moniteur-2.webp" type="image/webp"><img src="assets/img/team/moniteur-2.png" alt="Monitrice Hk Conduite" width="200" height="340" loading="lazy" decoding="async"></picture></div>
-            <h3>Prénom</h3>
-            <p class="team-role">Monitrice diplômée d'État · Formation boîte automatique</p>
-          </article>
-          <article class="team-card">
-            <div class="team-photo"><picture><source srcset="assets/img/team/moniteur-3.webp" type="image/webp"><img src="assets/img/team/moniteur-3.png" alt="Moniteur Hk Conduite" width="215" height="340" loading="lazy" decoding="async"></picture></div>
-            <h3>Prénom</h3>
-            <p class="team-role">Moniteur diplômé d'État · Code et accompagnement examen</p>
-          </article>
-        </div>
-        <button type="button" class="carousel-arrow next" aria-label="Carte suivante">
-          <svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg>
-        </button>
+    <section class="section success-gallery-section" aria-labelledby="success-gallery-title">
+      <div class="success-gallery-heading"><div><h2 id="success-gallery-title">Des sourires.<br><span>De nouvelles routes.</span></h2><p>Les moments qui marquent le parcours de nos élèves.</p></div><span class="gallery-view-hint"><svg class="icon" aria-hidden="true"><use href="#search"></use></svg>Cliquez pour agrandir</span></div>
+      <div class="real-success-gallery">
+        <figure class="success-shot success-shot--lesson"><a class="success-photo-link" data-gallery-image href="assets/img/eleve-permis-obtenu.png" aria-label="Agrandir la photo de l’élève avec son moniteur"><picture><source srcset="assets/img/eleve-permis-obtenu-640.webp 640w, assets/img/eleve-permis-obtenu.webp 1086w" sizes="(max-width: 640px) 100vw, 55vw" type="image/webp"><img src="assets/img/eleve-permis-obtenu.png" alt="Élève de Hk Conduite avec son moniteur dans le véhicule auto-école" width="1086" height="1448" decoding="async"></picture><span class="success-photo-zoom" aria-hidden="true"><svg class="icon"><use href="#search"></use></svg></span></a><figcaption><strong>La confiance, ça se construit.</strong><span>Accompagné par Hk Conduite.</span></figcaption></figure>
+        <figure class="success-shot success-shot--portrait"><a class="success-photo-link" data-gallery-image href="assets/img/eleve-reussite-hk-2026.jpg" aria-label="Agrandir la photo de l’élève avec son disque A"><img src="assets/img/eleve-reussite-hk-2026.jpg" alt="Élève devant l’agence Hk Conduite avec son disque A après l’obtention du permis" width="1050" height="1400" loading="lazy" decoding="async"><span class="success-photo-zoom" aria-hidden="true"><svg class="icon"><use href="#search"></use></svg></span></a><figcaption><strong>Le permis en poche.</strong><span>Une nouvelle route commence.</span></figcaption></figure>
+        <figure class="success-shot success-shot--drive"><a class="success-photo-link" data-gallery-image href="assets/img/eleve-hk-voiture-2026.jpg" aria-label="Agrandir la photo de l’élève au volant"><img src="assets/img/eleve-hk-voiture-2026.jpg" alt="Élève au volant d’une voiture de l’auto-école, visage flouté" width="1280" height="960" loading="lazy" decoding="async"><span class="success-photo-zoom" aria-hidden="true"><svg class="icon"><use href="#search"></use></svg></span></a><figcaption><strong>À vous de prendre le volant.</strong><span>Chaque leçon fait avancer.</span></figcaption></figure>
       </div>
     </section>
+    <dialog class="success-lightbox" aria-label="Photo de la galerie en grand">
+      <button class="lightbox-close" type="button" aria-label="Fermer la photo">Fermer <span aria-hidden="true">×</span></button>
+      <button class="lightbox-prev" type="button" aria-label="Photo précédente">←</button>
+      <figure><img alt=""><figcaption aria-live="polite"></figcaption></figure>
+      <button class="lightbox-next" type="button" aria-label="Photo suivante">→</button>
+    </dialog>
+
     <section class="section compact">
-      <div class="section-head"><p class="eyebrow">Publication</p><h2>Photos publiées avec accord.</h2><p>Les photos d'élèves doivent être publiées uniquement avec autorisation. Cette page est structurée pour accueillir les réussites de Hk Conduite.</p></div>
-      <a class="btn primary" href="contact.html">Envoyer une photo ou un témoignage</a>
+      <div class="section-head"><p class="eyebrow">Publication</p><img class="section-sticker" src="assets/img/illustrations/sticker-unique-gallery.png" alt="" aria-hidden="true" width="78" height="78" loading="lazy"><h2>Photos publiées avec accord.</h2><p>Partagez votre réussite avec nous. Vos photos sont publiées uniquement avec votre accord.</p></div>
+      <details class="photo-share">
+        <summary class="btn primary">Envoyer une photo ou un témoignage</summary>
+        <div class="photo-share-options">
+          <a class="btn primary" href="https://wa.me/33789530417?text=Bonjour%2C%20je%20souhaite%20vous%20envoyer%20une%20photo%20ou%20un%20t%C3%A9moignage." target="_blank" rel="noopener">Par WhatsApp</a>
+          <a class="btn secondary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=mujeebrahamanrahmani2122%40gmail.com&amp;su=Photo+ou+t%C3%A9moignage+%E2%80%94+Hk+Conduite&amp;body=Bonjour%2C%0A%0AJe+souhaite+vous+transmettre+une+photo+ou+un+t%C3%A9moignage.%0A%0A" target="_blank" rel="noopener">Par Gmail</a>
+        </div>
+        <p>Ajoutez votre photo en pièce jointe dans l’application choisie.</p>
+      </details>
     </section>
   </main>
   <footer class="site-footer">
@@ -225,6 +209,8 @@
         <div class="footer-contact">
           <p class="footer-heading">Nous contacter</p>
           <a href="tel:+33789530417"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i>07 89 53 04 17</a>
+          <a href="tel:+33699378343"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i>06 99 37 83 43</a>
+          <a href="mailto:hkconduite@outlook.fr"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#mail"></use></svg></i>hkconduite@outlook.fr</a>
           <span><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#pin"></use></svg></i>48 bis Rue Marcel Proust, 72000 Le Mans</span>
           <span><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#clock"></use></svg></i>Lun-Ven 10h-19h · Sam 10h-13h</span>
         </div>
@@ -237,8 +223,9 @@
           <a href="cgv.html">CGV</a>
         </div>
       </div>
-      <p class="footer-agreement">Agrément préfectoral n° [TODO — obligatoire légalement, à fournir par le client]</p>
+      <p class="footer-agreement">Agrément préfectoral n° E2507200130</p>
     </div>
+    <div class="footer-landscape" aria-hidden="true"><img src="assets/img/illustrations/footer-road.jpg" alt="" width="2172" height="724" loading="lazy" decoding="async"></div>
   </footer>
   <div class="mobile-cta-bar">
     <a class="btn secondary" href="tel:+33789530417"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i>Appeler</a>
@@ -247,6 +234,7 @@
   <script src="assets/js/road-canvas.js" defer></script>
   <script src="assets/js/dock-nav.js" defer></script>
   <script src="assets/js/carousel-fade.js" defer></script>
-  <script src="script.js" defer></script>
+  <script src="assets/js/success-gallery.js" defer></script>
+  <script src="script.js?v=20261028-spotlight-restored" defer></script>
 </body>
 </html>

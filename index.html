@@ -18,10 +18,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" as="style">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
-  <link rel="preload" as="image" href="assets/img/team-hero.webp" imagesrcset="assets/img/team-hero-640.webp 640w, assets/img/team-hero.webp 1086w" imagesizes="100vw" fetchpriority="high">
-  <link rel="preload" href="assets/css/styles.min.css" as="style">
-  <link rel="stylesheet" href="assets/css/styles.min.css" media="print" onload="this.media='all'; this.onload=null;">
-  <noscript><link rel="stylesheet" href="assets/css/styles.min.css"></noscript>
+  <link rel="preload" as="image" href="assets/img/hero-real-ron-lach.jpg" imagesrcset="assets/img/hero-real-ron-lach-900.jpg 600w, assets/img/hero-real-ron-lach.jpg 2000w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" href="assets/css/styles.min.css?v=20261028-arrows-previous" as="style">
+  <link rel="stylesheet" href="assets/css/styles.min.css?v=20261028-arrows-previous">
+  <noscript><link rel="stylesheet" href="assets/css/styles.min.css?v=20261028-arrows-previous"></noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -179,14 +179,14 @@
     <section class="hero" id="accueil">
       <div class="hero-card">
         <div class="hero-visual">
-          <div class="hero-media" aria-hidden="true"><picture><source srcset="assets/img/hero-driving-640.jpg 900w, assets/img/hero-driving.jpg 2400w" sizes="100vw"><img src="assets/img/hero-driving.jpg" alt="" width="2400" height="1600" decoding="async" fetchpriority="high" style="object-position: 32% 55%;"></picture></div>
+          <div class="hero-media" aria-hidden="true"><picture><source srcset="assets/img/hero-real-ron-lach-900.jpg 600w, assets/img/hero-real-ron-lach.jpg 2000w" sizes="100vw"><img src="assets/img/hero-real-ron-lach.jpg" alt="" width="2000" height="3000" decoding="async" fetchpriority="high"></picture></div>
           <div class="hero-overlay"></div>
           <div class="hero-content">
             <p class="eyebrow">Hk Conduite · Le Mans</p>
             <h1>Votre permis au Mans, en toute confiance.</h1>
             <p class="hero-text">Une formation claire et humaine, avec un suivi personnalisé à chaque étape.</p>
             <div class="hero-actions">
-              <a class="btn primary" href="contact.html">Demander une évaluation</a>
+              <a class="btn primary" href="contact.html?demande=evaluation#demande">Réserver mon évaluation</a>
               <a class="btn hero-secondary" href="formations.html">Voir les formations</a>
             </div>
           </div>
@@ -215,40 +215,13 @@
         </button>
       <div class="formula-grid">
         <article class="formula-card">
-          <span class="formula-type"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#steering"></use></svg></i>Manuelle</span>
-          <h3>Permis B classique</h3>
-          <p class="formula-price">Dès 1 190€</p>
-          <p>Formation progressive pour avancer à votre rythme avec un suivi complet.</p>
-          <ul>
-            <li>Évaluation de départ</li>
-            <li>Code en ligne</li>
-            <li>20h de conduite</li>
-            <li>Accompagnement examen</li>
-          </ul>
-          <a class="btn secondary-dark" href="inscription.html">Choisir cette formule</a>
-        </article>
-        <article class="formula-card featured-formula">
-          <span class="formula-badge"><svg class="badge-star" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1l2.6 5.9L19 7.6l-4.7 4.1L15.6 19 10 15.6 4.4 19l1.3-7.3L1 7.6l6.4-.7L10 1z"/></svg>Le plus choisi</span>
-          <span class="formula-type"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#car"></use></svg></i>Manuelle</span>
-          <h3>Permis B accéléré</h3>
-          <p class="formula-price">Dès 1 490€</p>
-          <p>Parcours intensif pour les élèves disponibles et motivés.</p>
-          <ul>
-            <li>Planning prioritaire</li>
-            <li>Sessions rapprochées</li>
-            <li>Examens blancs</li>
-            <li>Préparation complète</li>
-          </ul>
-          <a class="btn primary" href="inscription.html">Choisir cette formule</a>
-        </article>
-        <article class="formula-card">
           <span class="formula-type"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#car"></use></svg></i>Automatique</span>
-          <h3>Boîte auto classique</h3>
-          <p class="formula-price">Dès 890€</p>
+          <h3>Permis B classique — boîte automatique</h3>
+          <p class="formula-price">Dès 980 €</p>
           <p>Une formation plus accessible pour se concentrer sur la route et la sécurité.</p>
           <ul>
             <li>13h minimum légal</li>
-            <li>Code en ligne</li>
+            <li>Code en ligne en option : 30 €</li>
             <li>Véhicule automatique</li>
             <li>Passerelle possible</li>
           </ul>
@@ -257,14 +230,41 @@
         <article class="formula-card featured-formula">
           <span class="formula-badge"><svg class="badge-star" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1l2.6 5.9L19 7.6l-4.7 4.1L15.6 19 10 15.6 4.4 19l1.3-7.3L1 7.6l6.4-.7L10 1z"/></svg>Le plus choisi</span>
           <span class="formula-type"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#car"></use></svg></i>Automatique</span>
-          <h3>Boîte auto accélérée</h3>
-          <p class="formula-price">Dès 1 190€</p>
+          <h3>Permis B accéléré — boîte automatique</h3>
+          <p class="formula-price">Dès 1 218 €</p>
           <p>Un parcours rapide en automatique avec organisation renforcée.</p>
           <ul>
             <li>Créneaux rapprochés</li>
             <li>Suivi intensif</li>
             <li>Mises en situation</li>
             <li>Objectif examen</li>
+          </ul>
+          <a class="btn primary" href="inscription.html">Choisir cette formule</a>
+        </article>
+        <article class="formula-card">
+          <span class="formula-type"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#steering"></use></svg></i>Manuelle</span>
+          <h3>Permis B classique — boîte manuelle</h3>
+          <p class="formula-price">Dès 1 323 €</p>
+          <p>Formation progressive pour avancer à votre rythme avec un suivi complet.</p>
+          <ul>
+            <li>Évaluation offerte avec une formule</li>
+            <li>Code en ligne en option : 30 €</li>
+            <li>20h de conduite</li>
+            <li>Accompagnement examen</li>
+          </ul>
+          <a class="btn secondary-dark" href="inscription.html">Choisir cette formule</a>
+        </article>
+        <article class="formula-card featured-formula">
+          <span class="formula-badge"><svg class="badge-star" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1l2.6 5.9L19 7.6l-4.7 4.1L15.6 19 10 15.6 4.4 19l1.3-7.3L1 7.6l6.4-.7L10 1z"/></svg>Le plus choisi</span>
+          <span class="formula-type"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#car"></use></svg></i>Manuelle</span>
+          <h3>Permis B accéléré — boîte manuelle</h3>
+          <p class="formula-price">Dès 1 638 €</p>
+          <p>Parcours intensif pour les élèves disponibles et motivés.</p>
+          <ul>
+            <li>Planning prioritaire</li>
+            <li>Sessions rapprochées</li>
+            <li>Examens blancs</li>
+            <li>Préparation complète</li>
           </ul>
           <a class="btn primary" href="inscription.html">Choisir cette formule</a>
         </article>
@@ -281,6 +281,32 @@
         <a href="formations.html" class="btn secondary link-arrow">Voir toutes les formules en détail
           <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M15 5L10.5 1M15 5L10.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
+      </div>
+    </section>
+
+    <section class="section offers-section" id="parrainage" aria-labelledby="offers-title">
+      <div class="section-head">
+        <h2 id="offers-title">Un coup de pouce pour votre permis.</h2>
+        <p>Faites le premier pas, ou invitez un proche à nous rejoindre.</p>
+      </div>
+      <div class="offers-grid">
+        <article class="permit-offer permit-offer--evaluation" aria-labelledby="evaluation-offer-title">
+          <div class="offer-heading"><span>Évaluation offerte avec une formule</span><img class="offer-sticker offer-sticker--car" src="assets/img/illustrations/sticker-unique-evaluation.png" alt="" aria-hidden="true" width="420" height="280" loading="lazy"></div>
+          <h3 id="evaluation-offer-title">Le bon départ,<br>c’est de vous connaître.</h3>
+          <p>Un bilan pour choisir votre formation. Offert avec une formule de conduite, sinon 45 €.</p>
+          <ul class="offer-benefits">
+            <li><svg class="icon" aria-hidden="true"><use href="#check"></use></svg>Votre niveau évalué</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#check"></use></svg>Des conseils personnalisés</li>
+          </ul>
+          <a class="btn primary" href="contact.html?demande=evaluation#demande">Réserver mon évaluation <svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></a>
+        </article>
+        <article class="permit-offer permit-offer--referral" aria-labelledby="parrainage-title">
+          <div class="offer-heading"><span>Le permis, ça se partage</span><img class="offer-sticker" src="assets/img/illustrations/sticker-unique-referral.png" alt="" aria-hidden="true" width="320" height="320" loading="lazy"></div>
+          <h3 id="parrainage-title">Un proche parrainé.<br>Une heure offerte.</h3>
+          <p>Recommandez Hk Conduite à un proche et bénéficiez d’une heure de conduite offerte pour chaque personne parrainée.</p>
+          <div class="offer-how"><strong>Comment en profiter ?</strong><span>Votre proche indique votre nom et prénom à l’inscription. Notre équipe s’occupe de la suite avec vous.</span></div>
+          <a class="btn secondary" href="contact.html?demande=parrainage#demande">Signaler un parrainage <svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></a>
+        </article>
       </div>
     </section>
 
@@ -383,7 +409,7 @@
         <button type="button" class="carousel-arrow prev" aria-label="Carte précédente" disabled>
           <svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg>
         </button>
-        <div class="team-grid">
+        <div class="team-grid" data-spotlight="true">
           <article class="team-card">
             <div class="team-photo"><picture><source srcset="assets/img/team/moniteur-1.webp" type="image/webp"><img src="assets/img/team/moniteur-1.png" alt="Moniteur Hk Conduite" width="220" height="340" loading="lazy" decoding="async"></picture></div>
             <h3>Prénom</h3>
@@ -411,36 +437,21 @@
       </div>
     </section>
 
+
+
     <section class="google-proof-section" id="avis">
       <div class="google-proof-hero">
         <div class="google-proof-copy">
-          <p class="eyebrow">Avis Google</p>
-          <h2>Des avis Google<br>qui parlent <span>pour nous.</span></h2>
-          <div class="google-proof-actions">
-            <!-- TODO: remplacer par le lien exact de la fiche Google Business -->
-            <a class="btn primary google-all-reviews" href="https://www.google.com/maps/search/HK+Conduite+Le+Mans" target="_blank" rel="noopener"><img class="mini-google" src="assets/img/google-g.svg" alt="" aria-hidden="true">Voir tous les avis Google <i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></i></a>
-            <a class="btn secondary google-leave-review" href="https://g.page/r/CUpvjoG0t8O_EBE/review" target="_blank" rel="noopener"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#message"></use></svg></i>Laisser un avis</a>
-          </div>
+          <h2>Ils nous font <span>confiance.</span></h2>
         </div>
-        <aside class="google-rating-card" aria-label="Synthèse des avis Google">
-          <span class="verified-badge">Avis Google <i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#check"></use></svg></i></span>
-          <div class="google-rating-top">
-            <img class="google-logo" src="assets/img/google-g.svg" alt="" aria-hidden="true">
-            <div>
-              <strong>5,0<span>/5</span></strong>
-              <div class="review-stars" aria-label="5 étoiles">★★★★★</div>
-            </div>
-          </div>
-          <p>Basé sur <strong>9 avis Google</strong></p>
-          <p class="rating-check"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#check"></use></svg></i>Établissement recommandé par les élèves</p>
+        <aside class="google-rating-compact" aria-label="Note affichée : 5 sur 5, pour 9 avis Google">
+          <img src="assets/img/google-g.svg" alt="Google" width="36" height="36">
+          <div><div class="rating-score"><strong>5,0</strong><span>/5</span><span class="review-stars" aria-label="5 étoiles">★★★★★</span></div><p>9 avis Google</p></div>
         </aside>
       </div>
       <div class="carousel-wrap">
-        <button type="button" class="carousel-arrow prev" aria-label="Carte précédente" disabled>
-          <svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg>
-        </button>
         <div class="review-grid-static">
-        <figure class="google-review-card featured-review">
+        <figure class="google-review-card">
           <div class="review-top">
             <div class="review-avatar"><span class="review-avatar-fallback c2">M</span></div>
             <div class="review-meta">
@@ -477,14 +488,10 @@
           <blockquote>Un grand merci à l'équipe, super gentils, très agréables. Ils sont très à l'écoute et savent te mettre à l'aise et en confiance. Merci encore à vous.</blockquote>
         </figure>
         </div>
-        <button type="button" class="carousel-arrow next" aria-label="Carte suivante">
-          <svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg>
-        </button>
       </div>
-      <div style="text-align:center; margin-top: 2rem;">
-        <a href="resultats.html" class="btn secondary link-arrow">Voir tous les avis
-          <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M15 5L10.5 1M15 5L10.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+      <div class="google-proof-footer-actions">
+        <a class="btn primary" href="https://www.google.com/maps/search/HK+Conduite+Le+Mans" target="_blank" rel="noopener">Voir les avis Google <svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></a>
+        <a class="google-review-text-link" href="https://g.page/r/CUpvjoG0t8O_EBE/review" target="_blank" rel="noopener">Laisser un avis</a>
       </div>
     </section>
 
@@ -505,27 +512,27 @@
           <div class="faq-list" id="faqList">
             <details>
               <summary><span>Quels sont les tarifs de vos formations ?</span></summary>
-              <p>Nos tarifs varient selon la formule choisie : dès 890€ en boîte automatique et dès 1 190€ en boîte manuelle. Contactez-nous pour un devis personnalisé selon votre profil.</p>
+              <p>Le code en ligne est à <strong>30 €</strong>. Nos formules permis B commencent à <strong>980 € en boîte automatique</strong> et <strong>1 323 € en boîte manuelle</strong>. <a href="formations.html">Consultez nos formules</a> pour connaître les prestations incluses.</p>
             </details>
             <details>
               <summary><span>Quel est l'âge minimum pour passer le permis B ?</span></summary>
-              <p>Vous pouvez commencer votre formation dès 17 ans. La conduite accompagnée (AAC) est accessible dès 15 ans.</p>
+              <p>Vous pouvez passer l’épreuve pratique dès <strong>17 ans</strong>. La formation classique est accessible dès 16 ans, et la conduite accompagnée (AAC) dès 15 ans.</p>
             </details>
             <details>
               <summary><span>Combien d'heures de conduite sont obligatoires ?</span></summary>
-              <p>Le minimum légal est de 20 heures en boîte manuelle et 13 heures en boîte automatique. Selon votre progression, des heures supplémentaires peuvent être nécessaires.</p>
+              <p>En auto-école, le minimum est de <strong>20 heures en boîte manuelle</strong> et <strong>13 heures en boîte automatique</strong>, sauf exceptions. Votre évaluation de départ et votre progression déterminent le nombre d’heures nécessaire.</p>
             </details>
             <details>
               <summary><span>Combien de temps dure une formation ?</span></summary>
-              <p>La durée varie selon votre rythme, votre disponibilité et votre progression. En moyenne, une formation s'étale sur 2 à 6 mois.</p>
+              <p>La durée dépend de vos disponibilités, de votre progression et des places d’examen. Notre <strong>formule accélérée</strong> permet un rythme plus intensif, selon le planning.</p>
             </details>
             <details>
               <summary><span>Proposez-vous des facilités de paiement ?</span></summary>
-              <p>Oui. Nous proposons des solutions de paiement en plusieurs fois afin de faciliter le financement de votre formation.</p>
+              <p>Oui, le paiement en plusieurs fois est proposé. Contactez notre équipe pour connaître les modalités de votre formule.</p>
             </details>
             <details>
               <summary><span>Comment s'inscrire au permis de conduire ?</span></summary>
-              <p>Vous pouvez vous inscrire directement à l'agence ou nous contacter par téléphone ou via notre formulaire de contact. Nous vous accompagnons dans toutes les démarches administratives.</p>
+              <p>Passez dans l’une de nos agences pour préparer votre inscription, ou contactez-nous par téléphone ou via le <a href="contact.html">formulaire de contact</a>. La <a href="contact.html#documents-inscription">liste des documents</a> s’adapte à votre profil.</p>
             </details>
           </div>
         </div>
@@ -544,9 +551,8 @@
         <div class="contact-info-card">
           <div class="contact-details-grid">
             <div><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#pin"></use></svg></i><span>Adresse</span><strong>48 bis Rue Marcel Proust, 72000 Le Mans</strong></div>
-            <div><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i><span>Téléphone</span><strong>07 89 53 04 17</strong></div>
-            <!-- TODO: confirmer l'adresse email définitive avec le client -->
-            <div><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#mail"></use></svg></i><span>Email</span><strong>contact@hkconduite.fr</strong></div>
+            <div><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i><span>Téléphone</span><strong><a href="tel:+33789530417">07 89 53 04 17</a><br><a href="tel:+33699378343">06 99 37 83 43</a></strong></div>
+                <div><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#mail"></use></svg></i><span>Email</span><strong>hkconduite@outlook.fr</strong></div>
             <div><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#clock"></use></svg></i><span>Horaires</span><strong>Lun-Ven 10h-19h · Sam 10h-13h</strong></div>
           </div>
           <div class="contact-info-card-actions">
@@ -565,6 +571,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
@@ -607,6 +614,8 @@
         <div class="footer-contact">
           <p class="footer-heading">Nous contacter</p>
           <a href="tel:+33789530417"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i>07 89 53 04 17</a>
+          <a href="tel:+33699378343"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i>06 99 37 83 43</a>
+          <a href="mailto:hkconduite@outlook.fr"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#mail"></use></svg></i>hkconduite@outlook.fr</a>
           <span><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#pin"></use></svg></i>48 bis Rue Marcel Proust, 72000 Le Mans</span>
           <span><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#clock"></use></svg></i>Lun-Ven 10h-19h · Sam 10h-13h</span>
         </div>
@@ -619,9 +628,9 @@
           <a href="cgv.html">CGV</a>
         </div>
       </div>
-      <p class="footer-agreement">Agrément préfectoral n° [TODO — obligatoire légalement, à fournir par le client]</p>
-      <p class="footer-agreement">Icônes par <a href="https://www.flaticon.com/" target="_blank" rel="noopener">Flaticon</a></p>
+      <p class="footer-agreement">Agrément préfectoral n° E2507200130</p>
     </div>
+    <div class="footer-landscape" aria-hidden="true"><img src="assets/img/illustrations/footer-road.jpg" alt="" width="2172" height="724" loading="lazy" decoding="async"></div>
   </footer>
 
   <div class="mobile-cta-bar">
@@ -632,6 +641,6 @@
   <script src="assets/js/dock-nav.js" defer></script>
   <script src="assets/js/fade-up.js" defer></script>
   <script src="assets/js/carousel-fade.js" defer></script>
-  <script src="script.js" defer></script>
+  <script src="script.js?v=20261028-spotlight-restored" defer></script>
 </body>
 </html>

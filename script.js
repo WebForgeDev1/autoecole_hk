@@ -41,9 +41,34 @@ if (navToggle && nav) {
   });
 }
 
+if (contactForm) {
+  const requestType = new URLSearchParams(window.location.search).get("demande");
+  const projectField = contactForm.elements.namedItem("project");
+  if (projectField && ["evaluation", "parrainage"].includes(requestType)) {
+    projectField.value = requestType;
+  }
+  const referralInput = contactForm.elements.namedItem("parrain");
+  const syncReferralFields = () => {
+    const isReferral = projectField?.value === "parrainage";
+    contactForm.querySelectorAll("[data-referral-field]").forEach((field) => {
+      field.hidden = !isReferral;
+    });
+    if (referralInput) referralInput.disabled = !isReferral;
+  };
+  projectField?.addEventListener("change", syncReferralFields);
+  contactForm.addEventListener("reset", () => {
+    requestAnimationFrame(syncReferralFields);
+  });
+  syncReferralFields();
+}
+
 if (contactForm && formNote) {
   contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
+    if (contactForm.action.includes("/PLACEHOLDER")) {
+      formNote.textContent = "L’envoi en ligne n’est pas encore disponible. Appelez-nous au 07 89 53 04 17 pour votre évaluation ou votre parrainage.";
+      return;
+    }
     const formData = new FormData(contactForm);
     if (formData.get("_gotcha")) return; // honeypot rempli : soumission silencieusement ignorée
     const name = String(formData.get("firstname") || formData.get("name") || "").trim();
@@ -123,6 +148,11 @@ document.querySelectorAll(".carousel-wrap").forEach((wrap) => {
   };
 
   const updateScrollArrows = () => {
+    if (isTeamGrid && spotlightQuery.matches && track.dataset.spotlight !== "true") {
+      prevBtn.disabled = track.children.length < 2;
+      nextBtn.disabled = track.children.length < 2;
+      return;
+    }
     const maxScroll = track.scrollWidth - track.clientWidth;
     prevBtn.disabled = track.scrollLeft <= 4;
     nextBtn.disabled = track.scrollLeft >= maxScroll - 4;
@@ -248,6 +278,10 @@ document.querySelectorAll(".carousel-wrap").forEach((wrap) => {
 
   // ---------- shared arrow clicks: branch by current mode ----------
   prevBtn.addEventListener("click", () => {
+    if (isTeamGrid && spotlightQuery.matches && !spotlightActive) {
+      track.prepend(track.lastElementChild);
+      return;
+    }
     if (isTeamGrid && spotlightActive) {
       if (reducedMotion) {
         focusIndex = (focusIndex - 1 + 3) % 3;
@@ -260,6 +294,10 @@ document.querySelectorAll(".carousel-wrap").forEach((wrap) => {
     }
   });
   nextBtn.addEventListener("click", () => {
+    if (isTeamGrid && spotlightQuery.matches && !spotlightActive) {
+      track.append(track.firstElementChild);
+      return;
+    }
     if (isTeamGrid && spotlightActive) {
       if (reducedMotion) {
         focusIndex = (focusIndex + 1) % 3;
@@ -274,7 +312,7 @@ document.querySelectorAll(".carousel-wrap").forEach((wrap) => {
 
   // ---------- mode switching (load + resize) ----------
   const syncMode = () => {
-    if (isTeamGrid && spotlightQuery.matches) {
+    if (isTeamGrid && track.dataset.spotlight === "true" && spotlightQuery.matches) {
       if (!spotlightActive) {
         spotlightActive = true;
         setupSpotlight();
@@ -290,6 +328,20 @@ document.querySelectorAll(".carousel-wrap").forEach((wrap) => {
     }
   };
 
-  window.addEventListener("resize", syncMode);
+  window.addEventListener("resize", () => {
+    syncMode();
+    if (spotlightActive && !reducedMotion) layoutSpotlight(false);
+  });
   syncMode();
+  // Recalculate once fonts and portrait images have their final dimensions.
+  if (isTeamGrid) {
+    if (document.fonts) document.fonts.ready.then(() => {
+      if (spotlightActive && !reducedMotion) layoutSpotlight(false);
+    });
+    track.querySelectorAll("img").forEach((image) => {
+      if (!image.complete) image.addEventListener("load", () => {
+        if (spotlightActive && !reducedMotion) layoutSpotlight(false);
+      }, { once: true });
+    });
+  }
 });
