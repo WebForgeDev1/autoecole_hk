@@ -79,10 +79,11 @@ if (contactForm && formNote) {
     })
       .then((response) => {
         if (response.ok) {
-          formNote.textContent = name
-            ? `Merci ${name}, votre demande a bien été envoyée à Hk Conduite.`
-            : "Merci, votre demande a bien été envoyée à Hk Conduite.";
           contactForm.reset();
+          const params = new URLSearchParams();
+          if (name) params.set("prenom", name);
+          window.location.assign(`merci.html?${params.toString()}`);
+          return;
         } else {
           formNote.textContent = "Une erreur est survenue. Merci de réessayer ou de nous appeler directement.";
         }
