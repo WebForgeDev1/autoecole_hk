@@ -292,3 +292,4 @@
 @media (max-width: 1000px) { .agency-practical-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
 [data-referral-field][hidden] { display: none !important; }
+/* Footer without newsletter */.footer-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr!important}}
