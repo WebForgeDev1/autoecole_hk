@@ -95,6 +95,42 @@ if (contactForm && formNote) {
   });
 }
 
+document.querySelectorAll(".footer-newsletter-form").forEach((newsletterForm) => {
+  const button = newsletterForm.querySelector("button[type='submit']");
+  const initialLabel = button?.textContent;
+
+  newsletterForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!newsletterForm.reportValidity()) return;
+
+    if (button) {
+      button.disabled = true;
+      button.textContent = "Inscription…";
+    }
+
+    fetch(newsletterForm.action, {
+      method: "POST",
+      body: new FormData(newsletterForm),
+      headers: { Accept: "application/json" }
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error("Newsletter submission failed");
+        newsletterForm.reset();
+        if (button) button.textContent = "Merci !";
+      })
+      .catch(() => {
+        if (button) button.textContent = "Réessayer";
+      })
+      .finally(() => {
+        window.setTimeout(() => {
+          if (!button) return;
+          button.disabled = false;
+          button.textContent = initialLabel;
+        }, 2400);
+      });
+  });
+});
+
 const calendlyEmbed = document.querySelector("[data-calendly-embed]");
 const calendlyLoadBtn = document.querySelector("[data-calendly-load]");
 
