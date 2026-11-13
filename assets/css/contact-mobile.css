@@ -1,0 +1,63 @@
+/* Contact page: keep every section inside the phone viewport. */
+@media (max-width: 640px) {
+  .contact-page {
+    overflow-x: clip;
+  }
+
+  .contact-page .page-main,
+  .contact-page .page-hero,
+  .contact-page .faq-contact,
+  .contact-page .contact-intro,
+  .contact-page .contact-card,
+  .contact-page .info-card,
+  .contact-page .info-card > div {
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .contact-page .faq-contact {
+    display: block;
+    width: 100%;
+    padding: 1.5rem 1rem 0;
+  }
+
+  .contact-page .contact-intro,
+  .contact-page .contact-card,
+  .contact-page .info-card-list {
+    width: 100%;
+  }
+
+  .contact-page .contact-card {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+  }
+
+  .contact-page .info-card {
+    gap: 0.85rem;
+    padding: 1.1rem;
+  }
+
+  .contact-page .info-card > div {
+    flex: 1 1 auto;
+  }
+
+  .contact-page .page-hero h1,
+  .contact-page .page-hero > p,
+  .contact-page .contact-intro > p,
+  .contact-page .info-card p,
+  .contact-page .contact-card p,
+  .contact-page .contact-card input,
+  .contact-page .contact-card select,
+  .contact-page .contact-card textarea {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-page .hours-pill {
+    max-width: 100%;
+    padding: 0.75rem 1rem;
+    white-space: normal;
+  }
+}
