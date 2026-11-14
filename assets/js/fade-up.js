@@ -1,6 +1,6 @@
 (function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var targets = document.querySelectorAll('.section, .hero-content, .ready-cta, .project-contact, .stats-row, .google-proof-section, .formula-section');
+  var targets = document.querySelectorAll('.section:not(#accueil), .ready-cta, .project-contact, .stats-row, .google-proof-section, .formula-section');
   if (!targets.length || !('IntersectionObserver' in window)) return;
 
   var observer = new IntersectionObserver(function (entries) {

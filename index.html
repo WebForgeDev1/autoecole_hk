@@ -16,12 +16,10 @@
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" as="style">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
-  <link rel="preload" as="image" href="assets/img/hero-real-ron-lach.jpg" imagesrcset="assets/img/hero-real-ron-lach-900.jpg 600w, assets/img/hero-real-ron-lach.jpg 2000w" imagesizes="100vw" fetchpriority="high">
-  <link rel="preload" href="assets/css/styles.min.css?v=20261028-arrows-previous" as="style">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=optional" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=optional"></noscript>
+  <link rel="preload" as="image" imagesrcset="assets/img/hero-480.webp 480w, assets/img/hero-720.webp 720w, assets/img/hero-960.webp 960w, assets/img/hero-1440.webp 1440w, assets/img/hero-2000.webp 2000w" imagesizes="(min-width: 94rem) 90rem, 100vw" fetchpriority="high">
   <link rel="stylesheet" href="assets/css/styles.min.css?v=20261028-arrows-previous">
-  <noscript><link rel="stylesheet" href="assets/css/styles.min.css?v=20261028-arrows-previous"></noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -179,7 +177,7 @@
     <section class="hero" id="accueil">
       <div class="hero-card">
         <div class="hero-visual">
-          <div class="hero-media" aria-hidden="true"><picture><source srcset="assets/img/hero-real-ron-lach-900.jpg 600w, assets/img/hero-real-ron-lach.jpg 2000w" sizes="100vw"><img src="assets/img/hero-real-ron-lach.jpg" alt="" width="2000" height="3000" decoding="async" fetchpriority="high"></picture></div>
+          <div class="hero-media" aria-hidden="true"><img src="assets/img/hero-960.webp" srcset="assets/img/hero-480.webp 480w, assets/img/hero-720.webp 720w, assets/img/hero-960.webp 960w, assets/img/hero-1440.webp 1440w, assets/img/hero-2000.webp 2000w" sizes="(min-width: 94rem) 90rem, 100vw" alt="" width="2000" height="3000" fetchpriority="high"></div>
           <div class="hero-overlay"></div>
           <div class="hero-content">
             <p class="eyebrow">Hk Conduite · Le Mans</p>
@@ -291,7 +289,7 @@
       </div>
       <div class="offers-grid">
         <article class="permit-offer permit-offer--evaluation" aria-labelledby="evaluation-offer-title">
-          <div class="offer-heading"><span>Évaluation offerte avec une formule</span><img class="offer-sticker offer-sticker--car" src="assets/img/illustrations/sticker-unique-evaluation.png" alt="" aria-hidden="true" width="420" height="280" loading="lazy"></div>
+          <div class="offer-heading"><span>Évaluation offerte avec une formule</span><img class="offer-sticker offer-sticker--car" src="assets/img/illustrations/sticker-unique-evaluation-home.webp" alt="" aria-hidden="true" width="256" height="234" loading="lazy" decoding="async"></div>
           <h3 id="evaluation-offer-title">Le bon départ,<br>c’est de vous connaître.</h3>
           <p>Un bilan pour choisir votre formation. Offert avec une formule de conduite, sinon 45 €.</p>
           <ul class="offer-benefits">
@@ -301,7 +299,7 @@
           <a class="btn primary" href="contact.html?demande=evaluation#demande">Réserver mon évaluation <svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></a>
         </article>
         <article class="permit-offer permit-offer--referral" aria-labelledby="parrainage-title">
-          <div class="offer-heading"><span>Le permis, ça se partage</span><img class="offer-sticker" src="assets/img/illustrations/sticker-unique-referral.png" alt="" aria-hidden="true" width="320" height="320" loading="lazy"></div>
+          <div class="offer-heading"><span>Le permis, ça se partage</span><img class="offer-sticker" src="assets/img/illustrations/sticker-unique-referral-home.webp" alt="" aria-hidden="true" width="192" height="183" loading="lazy" decoding="async"></div>
           <h3 id="parrainage-title">Un proche parrainé.<br>Une heure offerte.</h3>
           <p>Recommandez Hk Conduite à un proche et bénéficiez d’une heure de conduite offerte pour chaque personne parrainée.</p>
           <div class="offer-how"><strong>Comment en profiter ?</strong><span>Votre proche indique votre nom et prénom à l’inscription. Notre équipe s’occupe de la suite avec vous.</span></div>
@@ -327,6 +325,7 @@
                 src="assets/img/process/inscription.webp"
                 alt=""
                 class="process-icon"
+                loading="lazy" decoding="async"
               >
             </div>
 
@@ -345,6 +344,7 @@
                 src="assets/img/process/code-route.webp"
                 alt=""
                 class="process-icon"
+                loading="lazy" decoding="async"
               >
             </div>
 
@@ -363,6 +363,7 @@
                 src="assets/img/process/conduite.webp"
                 alt=""
                 class="process-icon"
+                loading="lazy" decoding="async"
               >
             </div>
 
@@ -381,6 +382,7 @@
                 src="assets/img/process/examen.webp"
                 alt=""
                 class="process-icon"
+                loading="lazy" decoding="async"
               >
             </div>
 
@@ -617,7 +619,7 @@
       </div>
       <p class="footer-agreement">Agrément préfectoral n° E2507200130</p>
     </div>
-    <div class="footer-landscape" aria-hidden="true"><img src="assets/img/illustrations/footer-road.jpg" alt="" width="2172" height="724" loading="lazy" decoding="async"></div>
+    <div class="footer-landscape" aria-hidden="true"><img src="assets/img/illustrations/footer-road-home.webp" alt="" width="1600" height="533" loading="lazy" decoding="async"></div>
   </footer>
 
   <div class="mobile-cta-bar">
@@ -626,8 +628,8 @@
   </div>
 
   <script src="assets/js/dock-nav.js" defer></script>
-  <script src="assets/js/fade-up.js" defer></script>
+  <script src="assets/js/fade-up.js?v=20261114" defer></script>
   <script src="assets/js/carousel-fade.js" defer></script>
-  <script src="script.js?v=20261028-spotlight-restored" defer></script>
+  <script src="script.js?v=20261114" defer></script>
 </body>
 </html>

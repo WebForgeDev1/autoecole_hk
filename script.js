@@ -214,12 +214,8 @@ document.querySelectorAll(".carousel-wrap").forEach((wrap) => {
       card.setAttribute("aria-current", isFocus ? "true" : "false");
     });
 
-    if (!animate) {
-      void track.offsetWidth; // single forced reflow for the whole batch
-      cards.forEach((card) => { card.style.transition = ""; });
-    }
-
     const tallest = Math.max.apply(null, cards.map((c) => c.getBoundingClientRect().height));
+    if (!animate) cards.forEach((card) => { card.style.transition = ""; });
     track.style.height = tallest * 1.1 + "px";
   };
 
@@ -233,11 +229,11 @@ document.querySelectorAll(".carousel-wrap").forEach((wrap) => {
 
     wrapCard.style.transition = "none";
     wrapCard.style.transform = `translateX(${offStageSlot * step}px) scale(0.92)`;
-    void wrapCard.offsetWidth;
-    wrapCard.style.transition = "";
-
     focusIndex = (focusIndex + direction + 3) % 3;
-    requestAnimationFrame(() => layoutSpotlight(true));
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      wrapCard.style.transition = "";
+      if (spotlightActive) layoutSpotlight(true);
+    }));
   };
 
   const setupSpotlight = () => {
