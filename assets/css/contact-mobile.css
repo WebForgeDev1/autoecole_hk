@@ -1,4 +1,17 @@
-/* Keep both agency addresses visible without scrolling past embedded maps. */
+.contact-page .map-card .map-info {
+  flex: 1;
+}
+
+.contact-page .map-card .map-info .btn {
+  align-self: stretch;
+  margin-top: auto;
+}
+
+.contact-page .map-card .map-info h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* Keep both agency maps side by side at smaller widths. */
 @media (max-width: 900px) {
   .contact-page .contact-layout {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -7,11 +20,10 @@
   }
 
   .contact-page .map-card .map-embed {
-    display: none;
+    min-height: 150px;
   }
 
   .contact-page .map-card .map-info {
-    flex: 1;
     padding: clamp(0.65rem, 3vw, 1.5rem);
     overflow-wrap: anywhere;
   }
@@ -25,8 +37,6 @@
   }
 
   .contact-page .map-card .map-info .btn {
-    align-self: stretch;
-    margin-top: auto;
     padding: 0.5rem 0.25rem;
     gap: 0.25rem;
     font-size: 0.8rem;
