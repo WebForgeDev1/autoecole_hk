@@ -1,3 +1,9 @@
+@media (max-width: 900px) {
+  .project-contact {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .project-contact .agency-maps {
   width: 100%;
   margin: 0;

@@ -14,8 +14,8 @@
   <link rel="preload" href="assets/css/styles.min.css?v=20261028-practical" as="style">
   <link rel="stylesheet" href="assets/css/styles.min.css?v=20261028-practical" media="print" onload="this.media='all'; this.onload=null;">
   <noscript><link rel="stylesheet" href="assets/css/styles.min.css?v=20261028-practical"></noscript>
-  <link rel="stylesheet" href="assets/css/contact-mobile.css?v=20261115-3">
-  <link rel="canonical" href="https://hkconduite.fr/contact.html">
+  <link rel="stylesheet" href="assets/css/contact-mobile.css?v=20261115-4">
+  <link rel="canonical" href="https://hkconduite.fr/contact">
 </head>
 <body class="contact-page">
   <a class="skip-link" href="#main">Aller au contenu</a>
@@ -128,12 +128,12 @@
   </symbol>
   </svg>
   <header class="site-header inner-header is-scrolled" data-header>
-    <a class="brand" href="index.html"><picture><source srcset="assets/img/hk-logo-42.webp" type="image/webp"><img class="brand-logo" src="assets/img/hk-logo-42.png" alt="HK Conduite" width="42" height="42"></picture><span><strong>Hk Conduite</strong><small>Le Mans</small></span></a>
+    <a class="brand" href="/"><picture><source srcset="assets/img/hk-logo-42.webp" type="image/webp"><img class="brand-logo" src="assets/img/hk-logo-42.png" alt="HK Conduite" width="42" height="42"></picture><span><strong>Hk Conduite</strong><small>Le Mans</small></span></a>
     <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" data-nav-toggle><span></span><span></span><span></span></button>
-    <nav class="main-nav" data-nav><a href="index.html">Accueil</a><a href="formations.html">Formations</a><a href="resultats.html">Résultats</a><a href="galerie.html">Galerie</a><a href="contact.html" class="active">Contact</a></nav>
+    <nav class="main-nav" data-nav><a href="/">Accueil</a><a href="/formations">Formations</a><a href="/resultats">Résultats</a><a href="/galerie">Galerie</a><a href="/contact" class="active">Contact</a></nav>
     <div class="header-actions">
       <a class="header-phone" href="tel:+33789530417"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i>07 89 53 04 17</a>
-      <a class="header-cta" href="inscription.html">S'inscrire</a>
+      <a class="header-cta" href="/inscription">S'inscrire</a>
     </div>
   </header>
   <main class="page-main" id="main">
@@ -218,13 +218,13 @@
           <label><span>Nom <span class="req" aria-hidden="true">*</span></span><input type="text" name="lastname" placeholder="Dupont" required minlength="2" autocomplete="family-name"></label>
         </div>
         <label><span>Email <span class="req" aria-hidden="true">*</span></span><input type="email" name="email" placeholder="jean.dupont@email.com" required autocomplete="email" inputmode="email" autocapitalize="off" autocorrect="off"></label>
-        <label><span>Téléphone <span class="req" aria-hidden="true">*</span></span><input type="tel" name="phone" placeholder="06 12 34 56 78" required pattern="[0-9 +().-]{6,}" autocomplete="tel" inputmode="tel"></label>
+        <label><span>Téléphone <span class="req" aria-hidden="true">*</span></span><input type="tel" name="phone" placeholder="06 12 34 56 78" required pattern="(?=(?:[^0-9]*[0-9]){6})[0-9 .\(\)\+\-]+" autocomplete="tel" inputmode="tel"></label>
         <label>Formule souhaitée<select name="project"><option value="">Choisir une formule...</option><option>Permis B manuel</option><option>Permis B automatique</option><option>Code</option><option>Conduite accompagnée</option><option value="evaluation">Évaluation : offerte avec une formule, sinon 45 €</option><option value="parrainage">Parrainage</option></select></label>
         <label data-referral-field hidden>Nom et prénom du parrain (facultatif)<input disabled type="text" name="parrain" maxlength="120" placeholder="La personne qui vous recommande Hk Conduite" aria-describedby="parrain-help"></label>
         <p id="parrain-help" class="form-rgpd" data-referral-field hidden>Indiquez le nom et le prénom de la personne qui vous recommande Hk Conduite : elle bénéficie d’une heure de conduite offerte pour votre parrainage.</p>
         <label><span>Message <span class="req" aria-hidden="true">*</span></span><textarea name="message" rows="5" placeholder="Décrivez votre projet, vos disponibilités, vos objectifs..." required></textarea></label>
         <button class="btn primary" type="submit">Envoyer ma demande <i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></i></button>
-        <p class="form-rgpd">En envoyant ce formulaire, vous acceptez notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
+        <p class="form-rgpd">En envoyant ce formulaire, vous acceptez notre <a href="/confidentialite">politique de confidentialité</a>.</p>
         <p class="form-note" data-form-note role="status" aria-live="polite"></p>
       </form>
     </section>
@@ -272,7 +272,7 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-top">
-        <a class="brand" href="index.html"><picture><source srcset="assets/img/hk-logo-42.webp" type="image/webp"><img class="brand-logo" src="assets/img/hk-logo-42.png" alt="Hk Conduite" width="42" height="42"></picture><span><strong>Hk Conduite</strong><small>Le Mans</small></span></a>
+        <a class="brand" href="/"><picture><source srcset="assets/img/hk-logo-42.webp" type="image/webp"><img class="brand-logo" src="assets/img/hk-logo-42.png" alt="Hk Conduite" width="42" height="42"></picture><span><strong>Hk Conduite</strong><small>Le Mans</small></span></a>
         <p class="footer-tagline">Votre auto-école de confiance au Mans. Formation au permis B manuel et automatique, code de la route et conduite accompagnée.</p>
         <div class="footer-social">
           <a href="https://www.instagram.com/hk_conduite_/" target="_blank" rel="noopener" aria-label="Instagram Hk Conduite"><svg class="icon" aria-hidden="true"><use href="#instagram"></use></svg></a>
@@ -282,17 +282,17 @@
       <div class="footer-grid">
         <nav class="footer-nav" aria-label="Navigation secondaire">
           <p class="footer-heading">Navigation</p>
-          <a href="formations.html">Formations</a>
-          <a href="resultats.html">Résultats</a>
-          <a href="galerie.html">Galerie</a>
-          <a href="contact.html">Contact</a>
+          <a href="/formations">Formations</a>
+          <a href="/resultats">Résultats</a>
+          <a href="/galerie">Galerie</a>
+          <a href="/contact">Contact</a>
         </nav>
         <nav class="footer-nav" aria-label="Nos formations">
           <p class="footer-heading">Formations</p>
-          <a href="formations.html">Permis B manuel</a>
-          <a href="formations.html">Permis B automatique</a>
-          <a href="formations.html">Conduite accompagnée</a>
-          <a href="formations.html">Code de la route</a>
+          <a href="/formations">Permis B manuel</a>
+          <a href="/formations">Permis B automatique</a>
+          <a href="/formations">Conduite accompagnée</a>
+          <a href="/formations">Code de la route</a>
         </nav>
         <div class="footer-contact">
           <p class="footer-heading">Nous contacter</p>
@@ -306,9 +306,9 @@
       <div class="footer-bottom">
         <p>© 2026 Hk Conduite Le Mans. Tous droits réservés.</p>
         <div class="footer-legal">
-          <a href="mentions-legales.html">Mentions légales</a>
-          <a href="confidentialite.html">Politique de confidentialité</a>
-          <a href="cgv.html">CGV</a>
+          <a href="/mentions-legales">Mentions légales</a>
+          <a href="/confidentialite">Politique de confidentialité</a>
+          <a href="/cgv">CGV</a>
         </div>
       </div>
       <p class="footer-agreement">
@@ -320,11 +320,11 @@
   </footer>
   <div class="mobile-cta-bar">
     <a class="btn secondary" href="tel:+33789530417"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i>Appeler</a>
-    <a class="btn primary" href="inscription.html">S'inscrire</a>
+    <a class="btn primary" href="/inscription">S'inscrire</a>
   </div>
   <script src="assets/js/road-canvas.js" defer></script>
   <script src="assets/js/dock-nav.js" defer></script>
   <script src="assets/js/document-profile.js" defer></script>
-  <script src="script.js" defer></script>
+  <script src="script.js?v=20261115-form" defer></script>
 </body>
 </html>

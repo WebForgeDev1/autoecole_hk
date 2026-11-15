@@ -63,8 +63,18 @@ if (contactForm) {
 }
 
 if (contactForm && formNote) {
-  contactForm.addEventListener("submit", (event) => {
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+
+  window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+      submitButton.disabled = false;
+      formNote.textContent = "";
+    }
+  });
+
+  contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
+    if (submitButton.disabled || !contactForm.reportValidity()) return;
     if (contactForm.action.includes("/PLACEHOLDER")) {
       formNote.textContent = "L’envoi en ligne n’est pas encore disponible. Appelez-nous au 07 89 53 04 17 pour votre évaluation ou votre parrainage.";
       return;
@@ -72,27 +82,24 @@ if (contactForm && formNote) {
     const formData = new FormData(contactForm);
     if (formData.get("_gotcha")) return; // honeypot rempli : soumission silencieusement ignorée
     const name = String(formData.get("firstname") || formData.get("name") || "").trim();
-    fetch(contactForm.action, {
-      method: "POST",
-      body: formData,
-      headers: { Accept: "application/json" }
-    })
-      .then((response) => {
-        if (response.ok) {
-          contactForm.reset();
-          const params = new URLSearchParams();
-          if (name) params.set("prenom", name);
-          window.location.assign(`merci.html?${params.toString()}`);
-          return;
-        } else {
-          formNote.textContent = "Une erreur est survenue. Merci de réessayer ou de nous appeler directement.";
-        }
-        formNote.scrollIntoView({ behavior: "smooth", block: "center" });
-      })
-      .catch(() => {
-        formNote.textContent = "Une erreur est survenue. Merci de réessayer ou de nous appeler directement.";
-        formNote.scrollIntoView({ behavior: "smooth", block: "center" });
+    submitButton.disabled = true;
+    formNote.textContent = "Envoi de votre demande…";
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" }
       });
+      if (!response.ok) throw new Error("Échec de l’envoi");
+      contactForm.reset();
+      const params = new URLSearchParams();
+      if (name) params.set("prenom", name);
+      window.location.assign(name ? `merci?${params}` : "merci");
+    } catch {
+      submitButton.disabled = false;
+      formNote.textContent = "Une erreur est survenue. Merci de réessayer ou de nous appeler directement.";
+      formNote.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
   });
 }
 

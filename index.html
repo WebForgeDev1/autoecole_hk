@@ -19,8 +19,8 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=optional" as="style" onload="this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=optional"></noscript>
   <link rel="preload" as="image" imagesrcset="assets/img/hero-480.webp 480w, assets/img/hero-720.webp 720w, assets/img/hero-960.webp 960w, assets/img/hero-1440.webp 1440w, assets/img/hero-2000.webp 2000w" imagesizes="(min-width: 94rem) 90rem, 100vw" fetchpriority="high">
-  <link rel="stylesheet" href="assets/css/styles.min.css?v=20261028-arrows-previous">
-  <link rel="stylesheet" href="assets/css/contact-mobile.css?v=20261115-3">
+  <link rel="stylesheet" href="assets/css/styles.min.css?v=20261115-accessibility">
+  <link rel="stylesheet" href="assets/css/contact-mobile.css?v=20261115-4">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -166,21 +166,21 @@
   </symbol>
   </svg>
   <header class="site-header" data-header>
-    <a class="brand" href="index.html" aria-label="Accueil Hk Conduite Le Mans">
+    <a class="brand" href="/" aria-label="Accueil Hk Conduite Le Mans">
       <picture><source srcset="assets/img/hk-logo-42.webp" type="image/webp"><img class="brand-logo" src="assets/img/hk-logo-42.png" alt="HK Conduite" width="42" height="42"></picture>
       <span><strong>Hk Conduite</strong><small>Le Mans</small></span>
     </a>
     <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" data-nav-toggle><span></span><span></span><span></span></button>
     <nav class="main-nav" data-nav>
-      <a href="index.html" class="active">Accueil</a>
-      <a href="formations.html">Formations</a>
-      <a href="resultats.html">Résultats</a>
-      <a href="galerie.html">Galerie</a>
-      <a href="contact.html">Contact</a>
+      <a href="/" class="active">Accueil</a>
+      <a href="/formations">Formations</a>
+      <a href="/resultats">Résultats</a>
+      <a href="/galerie">Galerie</a>
+      <a href="/contact">Contact</a>
     </nav>
     <div class="header-actions">
       <a class="header-phone" href="tel:+33789530417"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i>07 89 53 04 17</a>
-      <a class="header-cta" href="contact.html">S'inscrire</a>
+      <a class="header-cta" href="/contact">S'inscrire</a>
     </div>
   </header>
 
@@ -195,8 +195,8 @@
             <h1>Votre permis au Mans, en toute confiance.</h1>
             <p class="hero-text">Une formation claire et humaine, avec un suivi personnalisé à chaque étape.</p>
             <div class="hero-actions">
-              <a class="btn primary" href="contact.html?demande=evaluation#demande">Réserver mon évaluation</a>
-              <a class="btn hero-secondary" href="formations.html">Voir les formations</a>
+              <a class="btn primary" href="/contact?demande=evaluation#demande">Réserver mon évaluation</a>
+              <a class="btn hero-secondary" href="/formations">Voir les formations</a>
             </div>
           </div>
         </div>
@@ -234,7 +234,7 @@
             <li>Véhicule automatique</li>
             <li>Passerelle possible</li>
           </ul>
-          <a class="btn secondary-dark" href="inscription.html">Choisir cette formule</a>
+          <a class="btn secondary-dark" href="/inscription">Choisir cette formule</a>
         </article>
         <article class="formula-card featured-formula">
           <span class="formula-badge"><svg class="badge-star" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1l2.6 5.9L19 7.6l-4.7 4.1L15.6 19 10 15.6 4.4 19l1.3-7.3L1 7.6l6.4-.7L10 1z"/></svg>Le plus choisi</span>
@@ -248,7 +248,7 @@
             <li>Mises en situation</li>
             <li>Objectif examen</li>
           </ul>
-          <a class="btn primary" href="inscription.html">Choisir cette formule</a>
+          <a class="btn primary" href="/inscription">Choisir cette formule</a>
         </article>
         <article class="formula-card">
           <span class="formula-type"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#steering"></use></svg></i>Manuelle</span>
@@ -261,7 +261,7 @@
             <li>20h de conduite</li>
             <li>Accompagnement examen</li>
           </ul>
-          <a class="btn secondary-dark" href="inscription.html">Choisir cette formule</a>
+          <a class="btn secondary-dark" href="/inscription">Choisir cette formule</a>
         </article>
         <article class="formula-card featured-formula">
           <span class="formula-badge"><svg class="badge-star" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1l2.6 5.9L19 7.6l-4.7 4.1L15.6 19 10 15.6 4.4 19l1.3-7.3L1 7.6l6.4-.7L10 1z"/></svg>Le plus choisi</span>
@@ -275,7 +275,7 @@
             <li>Examens blancs</li>
             <li>Préparation complète</li>
           </ul>
-          <a class="btn primary" href="inscription.html">Choisir cette formule</a>
+          <a class="btn primary" href="/inscription">Choisir cette formule</a>
         </article>
       </div>
         <button type="button" class="carousel-arrow next" aria-label="Formule suivante">
@@ -287,7 +287,7 @@
         <span>Paiement en 2 ou 3 fois selon la formule.</span>
       </div>
       <div style="text-align:center; margin-top: 2rem;">
-        <a href="formations.html" class="btn secondary link-arrow">Voir toutes les formules en détail
+        <a href="/formations" class="btn secondary link-arrow">Voir toutes les formules en détail
           <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M15 5L10.5 1M15 5L10.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -307,14 +307,14 @@
             <li><svg class="icon" aria-hidden="true"><use href="#check"></use></svg>Votre niveau évalué</li>
             <li><svg class="icon" aria-hidden="true"><use href="#check"></use></svg>Des conseils personnalisés</li>
           </ul>
-          <a class="btn primary" href="contact.html?demande=evaluation#demande">Réserver mon évaluation <svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></a>
+          <a class="btn primary" href="/contact?demande=evaluation#demande">Réserver mon évaluation <svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></a>
         </article>
         <article class="permit-offer permit-offer--referral" aria-labelledby="parrainage-title">
           <div class="offer-heading"><span>Le permis, ça se partage</span><img class="offer-sticker" src="assets/img/illustrations/sticker-unique-referral-home.webp" alt="" aria-hidden="true" width="192" height="183" loading="lazy" decoding="async"></div>
           <h3 id="parrainage-title">Un proche parrainé.<br>Une heure offerte.</h3>
           <p>Recommandez Hk Conduite à un proche et bénéficiez d’une heure de conduite offerte pour chaque personne parrainée.</p>
           <div class="offer-how"><strong>Comment en profiter ?</strong><span>Votre proche indique votre nom et prénom à l’inscription. Notre équipe s’occupe de la suite avec vous.</span></div>
-          <a class="btn secondary" href="contact.html?demande=parrainage#demande">Signaler un parrainage <svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></a>
+          <a class="btn secondary" href="/contact?demande=parrainage#demande">Signaler un parrainage <svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg></a>
         </article>
       </div>
     </section>
@@ -408,7 +408,7 @@
       </div>
 
       <div class="process-action">
-        <a href="formations.html">Formations</a>
+        <a href="/formations">Formations</a>
       </div>
     </section>
 
@@ -421,7 +421,7 @@
         <button type="button" class="carousel-arrow prev" aria-label="Carte précédente" disabled>
           <svg class="icon" aria-hidden="true"><use href="#arrow"></use></svg>
         </button>
-        <div class="team-grid" data-spotlight="true">
+        <div class="team-grid" data-spotlight="true" tabindex="0" role="region" aria-label="Équipe de moniteurs">
           <article class="team-card">
             <div class="team-photo"><picture><source srcset="assets/img/team/moniteur-1.webp" type="image/webp"><img src="assets/img/team/moniteur-1.png" alt="Moniteur Hk Conduite" width="220" height="340" loading="lazy" decoding="async"></picture></div>
             <h3>Antonio</h3>
@@ -443,7 +443,7 @@
         </button>
       </div>
       <div style="text-align:center; margin-top: 2rem;">
-        <a href="galerie.html" class="btn secondary link-arrow">Découvrir l'équipe et les réussites
+        <a href="/galerie" class="btn secondary link-arrow">Découvrir l'équipe et les réussites
           <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M15 5L10.5 1M15 5L10.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -462,7 +462,7 @@
         </aside>
       </div>
       <div class="carousel-wrap">
-        <div class="review-grid-static">
+        <div class="review-grid-static" tabindex="0" role="region" aria-label="Avis Google des élèves">
         <figure class="google-review-card">
           <div class="review-top">
             <div class="review-avatar"><span class="review-avatar-fallback c2">M</span></div>
@@ -516,15 +516,15 @@
             <p>Vous ne trouvez pas la réponse à votre question ? Notre équipe vous répond directement.</p>
           </div>
           <div class="faq-side-contact">
-            <a class="btn primary" href="formations.html">Comparer nos formules</a>
-            <a class="btn secondary-dark" href="contact.html">Nous contacter</a>
+            <a class="btn primary" href="/formations">Comparer nos formules</a>
+            <a class="btn secondary-dark" href="/contact">Nous contacter</a>
           </div>
         </aside>
         <div class="faq-panel">
           <div class="faq-list" id="faqList">
             <details>
               <summary><span>Quels sont les tarifs de vos formations ?</span></summary>
-              <p>Le code en ligne est à <strong>30 €</strong>. Nos formules permis B commencent à <strong>980 € en boîte automatique</strong> et <strong>1 323 € en boîte manuelle</strong>. <a href="formations.html">Consultez nos formules</a> pour connaître les prestations incluses.</p>
+              <p>Le code en ligne est à <strong>30 €</strong>. Nos formules permis B commencent à <strong>980 € en boîte automatique</strong> et <strong>1 323 € en boîte manuelle</strong>. <a href="/formations">Consultez nos formules</a> pour connaître les prestations incluses.</p>
             </details>
             <details>
               <summary><span>Quel est l'âge minimum pour passer le permis B ?</span></summary>
@@ -544,13 +544,13 @@
             </details>
             <details>
               <summary><span>Comment s'inscrire au permis de conduire ?</span></summary>
-              <p>Passez dans l’une de nos agences pour préparer votre inscription, ou contactez-nous par téléphone ou via le <a href="contact.html">formulaire de contact</a>. La <a href="contact.html#documents-inscription">liste des documents</a> s’adapte à votre profil.</p>
+              <p>Passez dans l’une de nos agences pour préparer votre inscription, ou contactez-nous par téléphone ou via le <a href="/contact">formulaire de contact</a>. La <a href="/contact#documents-inscription">liste des documents</a> s’adapte à votre profil.</p>
             </details>
           </div>
         </div>
       </div>
       <div style="text-align:center; margin-top: 1rem;">
-        <a href="formations.html#faq" class="btn secondary link-arrow">Toutes les questions
+        <a href="/formations#faq" class="btn secondary link-arrow">Toutes les questions
           <svg width="16" height="10" viewBox="0 0 16 10" fill="none"><path d="M1 5H15M15 5L10.5 1M15 5L10.5 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
       </div>
@@ -601,7 +601,7 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-top">
-        <a class="brand" href="index.html"><picture><source srcset="assets/img/hk-logo-42.webp" type="image/webp"><img class="brand-logo" src="assets/img/hk-logo-42.png" alt="Hk Conduite" width="42" height="42"></picture><span><strong>Hk Conduite</strong><small>Le Mans</small></span></a>
+        <a class="brand" href="/"><picture><source srcset="assets/img/hk-logo-42.webp" type="image/webp"><img class="brand-logo" src="assets/img/hk-logo-42.png" alt="Hk Conduite" width="42" height="42"></picture><span><strong>Hk Conduite</strong><small>Le Mans</small></span></a>
         <p class="footer-tagline">Votre auto-école de confiance au Mans. Formation au permis B manuel et automatique, code de la route et conduite accompagnée.</p>
         <div class="footer-social">
           <a href="https://www.instagram.com/hk_conduite_/" target="_blank" rel="noopener" aria-label="Instagram Hk Conduite"><svg class="icon" aria-hidden="true"><use href="#instagram"></use></svg></a>
@@ -611,17 +611,17 @@
       <div class="footer-grid">
         <nav class="footer-nav" aria-label="Navigation secondaire">
           <p class="footer-heading">Navigation</p>
-          <a href="formations.html">Formations</a>
-          <a href="resultats.html">Résultats</a>
-          <a href="galerie.html">Galerie</a>
-          <a href="contact.html">Contact</a>
+          <a href="/formations">Formations</a>
+          <a href="/resultats">Résultats</a>
+          <a href="/galerie">Galerie</a>
+          <a href="/contact">Contact</a>
         </nav>
         <nav class="footer-nav" aria-label="Nos formations">
           <p class="footer-heading">Formations</p>
-          <a href="formations.html">Permis B manuel</a>
-          <a href="formations.html">Permis B automatique</a>
-          <a href="formations.html">Conduite accompagnée</a>
-          <a href="formations.html">Code de la route</a>
+          <a href="/formations">Permis B manuel</a>
+          <a href="/formations">Permis B automatique</a>
+          <a href="/formations">Conduite accompagnée</a>
+          <a href="/formations">Code de la route</a>
         </nav>
         <div class="footer-contact">
           <p class="footer-heading">Nous contacter</p>
@@ -635,9 +635,9 @@
       <div class="footer-bottom">
         <p>© 2026 Hk Conduite Le Mans. Tous droits réservés.</p>
         <div class="footer-legal">
-          <a href="mentions-legales.html">Mentions légales</a>
-          <a href="confidentialite.html">Politique de confidentialité</a>
-          <a href="cgv.html">CGV</a>
+          <a href="/mentions-legales">Mentions légales</a>
+          <a href="/confidentialite">Politique de confidentialité</a>
+          <a href="/cgv">CGV</a>
         </div>
       </div>
       <p class="footer-agreement">
@@ -650,7 +650,7 @@
 
   <div class="mobile-cta-bar">
     <a class="btn secondary" href="tel:+33789530417"><i aria-hidden="true"><svg class="icon" aria-hidden="true"><use href="#phone"></use></svg></i>Appeler</a>
-    <a class="btn primary" href="contact.html">S'inscrire</a>
+    <a class="btn primary" href="/contact">S'inscrire</a>
   </div>
 
   <script src="assets/js/dock-nav.js" defer></script>
